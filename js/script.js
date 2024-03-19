@@ -6,7 +6,6 @@ $(document).ready(function(){
     const nav = document.getElementById('navbar');
 
     btnHamburger.click(function(){
-
         if(nav.classList.contains("active")){
             nav.classList.remove("active");
             icon.classList.remove("bx-x");
@@ -18,5 +17,4 @@ $(document).ready(function(){
             icon.classList.add("bx-x");
         }
     });
-
 });
