@@ -7,31 +7,32 @@
     <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="icons/css/boxicons.css" />
+    <link rel="stylesheet" href="icons/css/animations.css" />
   </head>
   <body>
     <header>
       <nav class="nav">
-        <ul class="nav__links">
-          <img src="images/logo.jpg" alt="" class="nav__logo" />
-          <li>
+        <ul class="nav__links" id="navbar">
+          <img src="images/logo.jpg" alt="Logo" class="nav__logo" />
+          <li class="nav__links-link">
             <a href="index.html" class="active">
               <i class="bx bxs-home-alt-2"></i>
               Inicio
             </a>
           </li>
-          <li>
+          <li class="nav__links-link">
             <a href="#">
               <i class="bx bxs-group"></i>
               Sobre nosotros
             </a>
           </li>
-          <li>
+          <li class="nav__links-link">
             <a href="#">
               <i class="bx bxs-package"></i>
               Productos
             </a>
           </li>
-          <li>
+          <li class="nav__links-link">
             <a href="#">
               <i class="bx bx-user-pin"></i>
               Contactanos
@@ -39,13 +40,119 @@
           </li>
         </ul>
         <div class="nav__user">
+          <img src="images/logo.jpg" alt="Logo" class="nav__logo" />
           <a href="" class="link__cart">
             <i class="bx bxs-cart-alt"></i>
             <span>10</span>
           </a>
           <a href="pages/login.html" class="link__login">Inicia sesión</a>
+          <button class="button-hamburger" id="button-hamburger">
+            <i class="bx bx-menu" id="icon-hamburger"></i>
+          </button>
         </div>
       </nav>
     </header>
+    <main>
+      <div class="contenedor-general">
+        <section class="contenedor-categorias">
+          <a href="" class="categorias__hombre"><p>Hombres</p></a>
+          <a href="" class="categorias__mujer"><p>Mujeres</p></a>
+          <a href="" class="categorias__niños"><p>Niños</p></a>
+          <a href="" class="categorias__acesorios"><p>Accesorios</p></a>
+        </section>
+
+        <section class="contenedor-ofertas">
+          <h2>Ofertas del día</h2>
+          <div class="ofertas__cards">
+            <div class="card__oferta">
+              <div class="card__header">
+                <img src="images/camisas/camisa1.jpg" alt="" srcset="" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__body-title">Camisa deportiva</h3>
+                <p class="card__body-text">
+                  Camisa deportiva para hombre, ideal para cualquier ocasión.
+                </p>
+                <p class="card__body-price">
+                  <span class="card__body-price-regular">$50.00</span>
+                  <span class="card__body-price-offer">$40.00</span>
+                </p>
+              </div>
+              <div class="card__footer">
+                <button class="button__card cart">
+                  <i class="bx bxs-cart-add"></i>
+                </button>
+                <a href="" class="button__card">Detalles</a>
+              </div>
+            </div>
+            <div class="card__oferta">
+              <div class="card__header">
+                <img src="images/camisas/camisa2.jpg" alt="" srcset="" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__body-title">Camisa deportiva</h3>
+                <p class="card__body-text">
+                  Camisa deportiva para hombre, ideal para cualquier ocasión.
+                </p>
+                <p class="card__body-price">
+                  <span class="card__body-price-regular">$50.00</span>
+                  <span class="card__body-price-offer">$40.00</span>
+                </p>
+              </div>
+              <div class="card__footer">
+                <button class="button__card cart">
+                  <i class="bx bxs-cart-add"></i>
+                </button>
+                <a href="" class="button__card">Detalles</a>
+              </div>
+            </div>
+            <div class="card__oferta">
+              <div class="card__header">
+                <img src="images/camisas/camisa3.jpg" alt="" srcset="" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__body-title">Camisa deportiva</h3>
+                <p class="card__body-text">
+                  Camisa deportiva para hombre, ideal para cualquier ocasión.
+                </p>
+                <p class="card__body-price">
+                  <span class="card__body-price-regular">$50.00</span>
+                  <span class="card__body-price-offer">$40.00</span>
+                </p>
+              </div>
+              <div class="card__footer">
+                <button class="button__card cart">
+                  <i class="bx bxs-cart-add"></i>
+                </button>
+                <a href="" class="button__card">Detalles</a>
+              </div>
+            </div>
+            <div class="card__oferta">
+              <div class="card__header">
+                <img src="images/camisas/camisa4.jpg" alt="" srcset="" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__body-title">Camisa deportiva</h3>
+                <p class="card__body-text">
+                  Camisa deportiva para hombre, ideal para cualquier ocasión.
+                </p>
+                <p class="card__body-price">
+                  <span class="card__body-price-regular">$50.00</span>
+                  <span class="card__body-price-offer">$40.00</span>
+                </p>
+              </div>
+              <div class="card__footer">
+                <button class="button__card cart">
+                  <i class="bx bxs-cart-add"></i>
+                </button>
+                <a href="" class="button__card">Detalles</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
