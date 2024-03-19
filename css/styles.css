@@ -63,6 +63,7 @@ header {
     height: 50px;
     border-radius: 50%;
     object-fit: contain;
+    background-color: #fff;
 }
 
 .nav__links {
@@ -174,7 +175,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid red;
 }
 
 .container-login .login__card {
