@@ -1,0 +1,269 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root{
+    --primary-color: #0ef;
+    --secondary-color: #001aff;
+    --tertiary-color: #c800ff;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/poppins.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/inter.ttf") format("truetype");
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    position: absolute;
+    top:0;
+    left:0;
+    background: linear-gradient(45deg, #c800ff,#001aff, #c800ff);
+    backdrop-filter: blur(50px);
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.nav__logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.nav__links{
+    display: flex;
+    list-style: none;
+    gap:30px;
+    align-items: center;
+}
+
+.nav__user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:70px
+}
+
+.nav__user a{
+    text-decoration: none;
+    position: relative;
+}
+
+.nav__user a span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color:#fff;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #c800ff;
+    border-radius: 100%;
+}
+
+.nav__user a i{
+    font-size: 25px;
+    color:#fff;
+}
+
+.nav__links > h1{
+    font-family: 'Syne Mono', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color:#fff;
+    transform: rotate(-5deg);
+    margin-right: 20px;
+}
+
+.nav__links li a{
+    text-decoration: none;
+    font-family: 'Syne Mono', sans-serif;
+    font-weight: bold;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    position: relative;
+}
+
+.nav__links li .active::before{
+    width: 100%;
+    left: 0;
+}
+
+.nav__links li a::before{
+    content: ""; 
+    position: absolute;
+    bottom: -3px;
+    left: 100%; 
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav__links li a:hover::before{
+    width: 100%; 
+    left: 0;
+}
+
+.nav__links li a i{
+    font-size: 20px;
+}
+
+.link__login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 7px 30px;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-family: "Syne Mono", sans-serif;
+    font-weight: bold;
+}
+
+.link__login:hover{
+    background-color: #dfdfdf;
+    color: #000;
+}
+
+.image_perfil{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container-login{
+    width: 100%;
+    height: 100vh;
+}
+
+.container-login .login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-login .login .login__title{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 0 0 4px #e7f619;
+    text-transform: uppercase;
+}
+
+.container-login .login .login__form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 400px;
+    padding: 40px;
+}
+
+.container-login .login .login__form .form-group{
+    background-color:#ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+}
+
+.container-login .login .login__form .form-group .login__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex:1;
+    background:  linear-gradient(45deg, #0ef, #001aff);
+}
+
+.container-login .login .login__form .form-group .login__icon i{
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-login .login .login__form input{
+    flex:4;
+    padding: 15px 20px 15px 0px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.container-login .login .login__form button{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+    background:  linear-gradient(45deg, #0ef, #c800ff);
+    transition: 0.2s ease;
+}
+
+.container-login .login .login__form button:hover{
+    box-shadow: 0 0 4px #fff;
+}
+
+.container-login .login .login__form button i{
+    font-size: 20px;
+}
+
