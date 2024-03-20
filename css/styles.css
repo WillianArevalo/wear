@@ -442,7 +442,9 @@ header {
     margin: 60px;
     width: 40%;
     padding: 20px;
-    background-color: #fff;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
 }
 
@@ -453,7 +455,9 @@ header {
     margin: 60px;
     width: 40%;
     padding: 20px;
-    background-color: #fff;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5); 
     border-radius: 5px;
 }
 
@@ -464,7 +468,9 @@ header {
     margin: 60px;
     width: 40%;
     padding: 20px;
-    background-color: #fff;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
 }
 
@@ -473,10 +479,7 @@ header {
     text-transform: uppercase;
     margin-bottom: 20px;
     font-weight: bold;
-        color: transparent;
-    background-image: linear-gradient(45deg, #c800ff, rgb(0, 128, 255));
-    -webkit-background-clip: text;
-    background-clip: text;
+    color:#000;
 }
 
 .carousel-slide .carousel-slide__content p {
@@ -490,11 +493,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #dfdfdf;
-    color: #000;
+    background: linear-gradient(45deg, #0ef, #c800ff);
+    color: #fff;
     border: none;
     border-radius: 20px;
     font-size: 13px;
+    font-weight: bold;
 }
 
 .carousel-slide .carousel-slide__content a:hover {
@@ -752,10 +756,10 @@ header {
 @media(max-width:950px){
 
     .contenedor-populares .carousel-slide .carousel-slide__content {
-        margin: 10px auto;
-        width: 70%;
-        padding: 15px;
+        left: 0;
+        right: 0;
     }
+
 
     .contenedor-populares .carousel-slide .carousel-slide__content h3 {
         font-size: 22px;
@@ -778,10 +782,6 @@ header {
         padding: 0px;
         height: 200px;
         margin-top: 150px;
-    }
-
-    .contenedor-populares .carousel-container {
-        width: 100%;
     }
 
     .contenedor-populares .carousel-slide .carousel-slide__content {
