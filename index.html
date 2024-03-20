@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wear | Store Online</title>
+
     <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="icons/css/boxicons.css" />
-    <link rel="stylesheet" href="icons/css/animations.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
@@ -59,20 +63,63 @@
             <i class="bx bxs-left-arrow"></i>
           </button>
           <div class="carousel-container">
-            <div class="carousel-slide active">
-              <img src="images/carousel/image1.webp" alt="Imagen 1" />
+            <div
+              class="carousel-slide active"
+              style="
+                background-image: url('images/carousel/image1.webp');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            >
+              <div class="carousel-slide__content slider-1">
+                <h3>Los mejores conjuntos de accesorios y vestimenta</h3>
+                <p>
+                  Encuentra los mejores conjuntos de accesorios y vestimenta
+                  para hombres y mujeres.
+                </p>
+                <a href="#">Ver más</a>
+              </div>
             </div>
-            <div class="carousel-slide">
-              <img src="images/carousel/image2.webp" alt="Imagen 2" />
+            <div
+              class="carousel-slide"
+              style="
+                background-image: url('images/carousel/image2.webp');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            >
+              <div class="carousel-slide__content slider-2">
+                <h3>Ofertas todos los días en ropa para hombres y mujeres</h3>
+                <p>
+                  Encuentra las mejores ofertas en ropa para hombres y mujeres
+                  todos los días, no te las pierdas.
+                </p>
+                <a href="#">Ver ofertas</a>
+              </div>
             </div>
-            <div class="carousel-slide">
-              <img src="images/carousel/image3.webp" alt="Imagen 3" />
+            <div
+              class="carousel-slide"
+              style="
+                background-image: url('images/carousel/image3.webp');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            >
+              <div class="carousel-slide__content slider-3">
+                <h3>Conjuntos completos para parejas</h3>
+                <p>Encuentra los mejores conjuntos completos para parejas.</p>
+                <a href="#">Ver más</a>
+              </div>
             </div>
           </div>
           <button id="nextBtn">
             <i class="bx bxs-right-arrow"></i>
           </button>
         </section>
+
         <section class="contenedor-categorias">
           <a href="" class="categorias__hombre"><p>Hombres</p></a>
           <a href="" class="categorias__mujer"><p>Mujeres</p></a>
@@ -81,136 +128,212 @@
         </section>
         <section class="contenedor-ofertas">
           <h2>Mejores ofertas</h2>
-          <div class="ofertas__cards">
-            <div class="card__oferta">
-              <div class="card__header">
-                <img src="images/camisas/camisa1.webp" alt="" srcset="" />
-              </div>
-              <div class="card__body">
-                <h3 class="card__body-title">Camisa deportiva</h3>
-                <p class="card__body-text">
-                  Camisa deportiva para hombre, ideal para cualquier ocasión.
-                </p>
-                <p class="card__body-price">
-                  <span class="card__body-price-regular">$50.00</span>
-                  <span class="card__body-price-offer">$40.00</span>
-                </p>
-                <div class="card__body-stars">
-                  <div class="starts">
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star"></i>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card__oferta">
+                  <div class="card__header">
+                    <img
+                      loading="lazy"
+                      src="images/camisas/camisa1.webp"
+                      alt=""
+                      srcset=""
+                    />
                   </div>
-                  <p>4.0</p>
+                  <div class="card__body">
+                    <h3 class="card__body-title">Camisa deportiva</h3>
+                    <p class="card__body-text">
+                      Camisa deportiva para hombre, ideal para cualquier
+                      ocasión.
+                    </p>
+                    <p class="card__body-price">
+                      <span class="card__body-price-regular">$50.00</span>
+                      <span class="card__body-price-offer">$40.00</span>
+                    </p>
+                    <div class="card__body-stars">
+                      <div class="starts">
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star"></i>
+                      </div>
+                      <p>4.0</p>
+                    </div>
+                  </div>
+                  <div class="card__footer">
+                    <button class="button__card cart">
+                      <i class="bx bx-cart-alt"></i>
+                    </button>
+                    <a href="" class="button__card">Detalles</a>
+                  </div>
                 </div>
               </div>
-              <div class="card__footer">
-                <button class="button__card cart">
-                  <i class="bx bx-cart-alt"></i>
-                </button>
-                <a href="" class="button__card">Detalles</a>
-              </div>
-            </div>
-            <div class="card__oferta">
-              <div class="card__header">
-                <img src="images/camisas/camisa2.webp" alt="" srcset="" />
-              </div>
-              <div class="card__body">
-                <h3 class="card__body-title">Camisa deportiva</h3>
-                <p class="card__body-text">
-                  Camisa deportiva para hombre, ideal para cualquier ocasión.
-                </p>
-                <p class="card__body-price">
-                  <span class="card__body-price-regular">$50.00</span>
-                  <span class="card__body-price-offer">$40.00</span>
-                </p>
-                <div class="card__body-stars">
-                  <div class="starts">
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star light"></i>
+              <div class="swiper-slide">
+                <div class="card__oferta">
+                  <div class="card__header">
+                    <img
+                      loading="lazy"
+                      src="images/camisas/camisa2.webp"
+                      alt=""
+                      srcset=""
+                    />
                   </div>
-                  <p>5.0</p>
+                  <div class="card__body">
+                    <h3 class="card__body-title">Camisa deportiva</h3>
+                    <p class="card__body-text">
+                      Camisa deportiva para hombre, ideal para cualquier
+                      ocasión.
+                    </p>
+                    <p class="card__body-price">
+                      <span class="card__body-price-regular">$50.00</span>
+                      <span class="card__body-price-offer">$40.00</span>
+                    </p>
+                    <div class="card__body-stars">
+                      <div class="starts">
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                      </div>
+                      <p>5.0</p>
+                    </div>
+                  </div>
+                  <div class="card__footer">
+                    <button class="button__card cart">
+                      <i class="bx bx-cart-alt"></i>
+                    </button>
+                    <a href="" class="button__card">Detalles</a>
+                  </div>
                 </div>
               </div>
-              <div class="card__footer">
-                <button class="button__card cart">
-                  <i class="bx bx-cart-alt"></i>
-                </button>
-                <a href="" class="button__card">Detalles</a>
-              </div>
-            </div>
-            <div class="card__oferta">
-              <div class="card__header">
-                <img src="images/camisas/camisa3.webp" alt="" srcset="" />
-              </div>
-              <div class="card__body">
-                <h3 class="card__body-title">Camisa deportiva</h3>
-                <p class="card__body-text">
-                  Camisa deportiva para hombre, ideal para cualquier ocasión.
-                </p>
-                <p class="card__body-price">
-                  <span class="card__body-price-regular">$50.00</span>
-                  <span class="card__body-price-offer">$40.00</span>
-                </p>
-                <div class="card__body-stars">
-                  <div class="starts">
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star"></i>
+              <div class="swiper-slide">
+                <div class="card__oferta">
+                  <div class="card__header">
+                    <img
+                      loading="lazy"
+                      src="images/camisas/camisa3.webp"
+                      alt=""
+                      srcset=""
+                    />
                   </div>
-                  <p>4.0</p>
+                  <div class="card__body">
+                    <h3 class="card__body-title">Camisa deportiva</h3>
+                    <p class="card__body-text">
+                      Camisa deportiva para hombre, ideal para cualquier
+                      ocasión.
+                    </p>
+                    <p class="card__body-price">
+                      <span class="card__body-price-regular">$50.00</span>
+                      <span class="card__body-price-offer">$40.00</span>
+                    </p>
+                    <div class="card__body-stars">
+                      <div class="starts">
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star"></i>
+                      </div>
+                      <p>4.0</p>
+                    </div>
+                  </div>
+                  <div class="card__footer">
+                    <button class="button__card cart">
+                      <i class="bx bx-cart-alt"></i>
+                    </button>
+                    <a href="" class="button__card">Detalles</a>
+                  </div>
                 </div>
               </div>
-              <div class="card__footer">
-                <button class="button__card cart">
-                  <i class="bx bx-cart-alt"></i>
-                </button>
-                <a href="" class="button__card">Detalles</a>
-              </div>
-            </div>
-            <div class="card__oferta">
-              <div class="card__header">
-                <img src="images/camisas/camisa4.webp" alt="" srcset="" />
-              </div>
-              <div class="card__body">
-                <h3 class="card__body-title">Camisa deportiva</h3>
-                <p class="card__body-text">
-                  Camisa deportiva para hombre, ideal para cualquier ocasión.
-                </p>
-                <p class="card__body-price">
-                  <span class="card__body-price-regular">$50.00</span>
-                  <span class="card__body-price-offer">$40.00</span>
-                </p>
-                <div class="card__body-stars">
-                  <div class="starts">
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star light"></i>
-                    <i class="bx bxs-star"></i>
+              <div class="swiper-slide">
+                <div class="card__oferta">
+                  <div class="card__header">
+                    <img
+                      loading="lazy"
+                      src="images/camisas/camisa4.webp"
+                      alt=""
+                      srcset=""
+                    />
                   </div>
-                  <p>4.5</p>
+                  <div class="card__body">
+                    <h3 class="card__body-title">Camisa deportiva</h3>
+                    <p class="card__body-text">
+                      Camisa deportiva para hombre, ideal para cualquier
+                      ocasión.
+                    </p>
+                    <p class="card__body-price">
+                      <span class="card__body-price-regular">$50.00</span>
+                      <span class="card__body-price-offer">$40.00</span>
+                    </p>
+                    <div class="card__body-stars">
+                      <div class="starts">
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star"></i>
+                      </div>
+                      <p>4.5</p>
+                    </div>
+                  </div>
+                  <div class="card__footer">
+                    <button class="button__card cart">
+                      <i class="bx bx-cart-alt"></i>
+                    </button>
+                    <a href="" class="button__card">Detalles</a>
+                  </div>
                 </div>
               </div>
-              <div class="card__footer">
-                <button class="button__card cart">
-                  <i class="bx bx-cart-alt"></i>
-                </button>
-                <a href="" class="button__card">Detalles</a>
+              <div class="swiper-slide">
+                <div class="card__oferta">
+                  <div class="card__header">
+                    <img
+                      loading="lazy"
+                      src="images/camisas/conjuntocompleto.webp"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__body-title">Camisa deportiva</h3>
+                    <p class="card__body-text">
+                      Camisa deportiva para hombre, ideal para cualquier
+                      ocasión.
+                    </p>
+                    <p class="card__body-price">
+                      <span class="card__body-price-regular">$50.00</span>
+                      <span class="card__body-price-offer">$40.00</span>
+                    </p>
+                    <div class="card__body-stars">
+                      <div class="starts">
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star"></i>
+                      </div>
+                      <p>4.5</p>
+                    </div>
+                  </div>
+                  <div class="card__footer">
+                    <button class="button__card cart">
+                      <i class="bx bx-cart-alt"></i>
+                    </button>
+                    <a href="" class="button__card">Detalles</a>
+                  </div>
+                </div>
               </div>
             </div>
+            <div class="swiper-pagination"></div>
           </div>
         </section>
       </div>
     </main>
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/script.js"></script>
     <script src="js/carousel.js"></script>
   </body>
