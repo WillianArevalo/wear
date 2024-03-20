@@ -31,6 +31,26 @@ document.addEventListener("DOMContentLoaded", function() {
     prevBtn.addEventListener("click", prevSlide);
   
     // Cambiar automáticamente a la siguiente diapositiva cada 3 segundos
-    setInterval(nextSlide, 5000);
+    //setInterval(nextSlide, 5000);
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var lazyImages = document.querySelectorAll('.lazy');
+      
+        function lazyLoad() {
+          lazyImages.forEach(function(img) {
+            if (img.getBoundingClientRect().top < window.innerHeight && img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+          });
+        }
+      
+        // Cargar las imágenes visibles al cargar la página
+        lazyLoad();
+      
+        // Cargar las imágenes restantes al hacer scroll
+        window.addEventListener('scroll', lazyLoad);
+      });
+
   });
   
