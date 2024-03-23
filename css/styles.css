@@ -44,6 +44,7 @@ option {
     --primary-color: #0ef;
     --secondary-color: #001aff;
     --tertiary-color: #c800ff;
+    --black-color: #0f111c;
 }
 
 * {
@@ -69,6 +70,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    height: 70px;
     background: linear-gradient(45deg, #c800ff, #001aff, #7986fa, #001aff, #c800ff);
     backdrop-filter: blur(50px);
 }
@@ -222,10 +224,11 @@ header {
     object-fit: cover;
 }
 
+/* LOGIN */
 .container-login {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(45deg, #c800ff, #0ef, #c800ff);
+    background:linear-gradient(to right, var(--primary-color), var(--tertiary-color));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,23 +239,31 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 20px;
-    background-color: #fff;
-    padding: 50px;
     border-radius: 5px;
+    flex-direction: column;
+    margin-bottom: 100px;
 }
 
 .container-login .login__image {
     margin-right: 25px;
-    height: 100%;
-    background-color: #fff;
+    width: 150px;
+    height: 150px;
+    background:linear-gradient(to right, #5885ff, #6b6eff);
+    border-radius: 50%;
+    position: relative;
+    top:80px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .container-login .login__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 50%;
+    padding: 10px;
 }
 
 .container-login .login {
@@ -260,13 +271,16 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-left: 2px solid #c800ff;
+    background-color: #0f111c;
+    padding:70px 70px 30px 70px; 
+    border-radius: 10px;
 }
 
 .container-login .login .login__title {
     font-weight: bold;
     font-size: 30px;
-    color: #000;
+    color: #fff;
+    margin-top: 20px;
     text-transform: uppercase;
 }
 
@@ -275,7 +289,7 @@ header {
     flex-direction: column;
     gap: 15px;
     width: 400px;
-    padding: 40px;
+    padding: 40px 0px;
 }
 
 .container-login .login .login__form .form-group {
@@ -284,6 +298,7 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
+    border-radius: 30px;
 }
 
 .container-login .login .login__form .form-group .login__icon {
@@ -291,22 +306,21 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 50px;
+    height: 40px;
     flex: 1;
-    background: linear-gradient(45deg, #0ef, #001aff);
+    background: linear-gradient(45deg, var(--primary-color) , var(--tertiary-color));
+    border-radius: 30px 0px 0px 30px;
 }
 
-.container-login .login .login__form .form-group .login__icon i {
-    font-size: 20px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container-login .login .login__form .form-group .login__icon svg {
+   width: 20px;
+   height: 20px;
+   color:#fff;
 }
 
 .container-login .login .login__form input {
-    flex: 4;
-    height: 50px;
+    flex: 6;
+    height: 40px;
     border: none;
     outline: none;
     background-color: transparent;
@@ -314,14 +328,34 @@ header {
     margin-left: 10px;
 }
 
+.container-login .login .login__form .remember-me{
+    display: flex;
+    width: max-content;
+    margin: 10px 0px;
+}
+
+.container-login .login .login__form .remember-me label{
+    color:#fff;     
+}
+
+.container-login .login .login__form .remember-me input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.container-login .login .login__form .remember-me input[type="checkbox"]:checked{
+    background-color: var(--tertiary-color) !important;
+}
+
+
 .container-login .login .login__form button {
     color: #fff;
     cursor: pointer;
     border: none;
     padding: 10px;
-    width: 50%;
+    width: 100%;
     margin: auto;
-    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -336,8 +370,80 @@ header {
     box-shadow: 0 0 4px #fff;
 }
 
-.container-login .login .login__form button i {
-    font-size: 20px;
+.container-login .login .login__form button svg {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}
+
+.container-login .login .login__form .login__forgot {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.container-login .login .login__form .login__forgot a {
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+}
+
+.container-login .login .login__form .login__forgot a::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 100%;
+    width: 0;
+    height: 3px;
+    background-color: var(--tertiary-color);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.container-login .login .login__form .login__forgot a:hover{
+    color: var(--tertiary-color);   
+}
+
+.container-login .login .login__form .login__forgot a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.container-login .login .login__form .login-register{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.container-login .login .login__form .login-register span{
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container-login .login .login__form .login-register a{
+    color: #fff;
+    position: relative;
+    font-size: 14px;
+}
+
+.container-login .login .login__form .login-register a::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 100%;
+    width: 0;
+    height: 3px;
+    background-color: var(--tertiary-color);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.container-login .login .login__form .login-register a:hover{
+    color: var(--tertiary-color);   
+}
+
+.container-login .login .login__form .login-register a:hover::before {
+    width: 100%;
+    left: 0;
 }
 
 .login__social {
@@ -402,13 +508,14 @@ header {
     display: none;
 }
 
-/* Main */
+/* MAIN */
 
 .main {
-    margin-top: 100px;
+    margin-top: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--black-color);
 }
 
 .contenedor-general {
@@ -418,7 +525,7 @@ header {
 /* SECTION POPULARES  */
 
 .contenedor-carousel {
-    padding: 20px;
+    margin-top: 60px;
     display: flex;
     align-items: center;
 }
@@ -428,8 +535,8 @@ header {
     padding: 10px;
     cursor: pointer;
     color: #fff;
-    background: linear-gradient(45deg, #0ef, #c800ff);
-    height: 90px;
+    background: linear-gradient(45deg, var(--primary-color), var(--tertiary-color));
+    height: 70px;
     border-radius: 4px;
     position: relative;
 }
@@ -444,8 +551,10 @@ header {
     z-index: 50;
 }
 
-.contenedor-carousel button i {
-    font-size: 40px;
+.contenedor-carousel button svg {
+    height: 40px;
+    width: 40px;
+    color:#fff; 
 }
 
 .carousel-container {
@@ -533,8 +642,8 @@ header {
     align-items: center;
     justify-content: center;
     background: transparent;
-    border: 2px solid #982ffa;
-    color: #982ffa;
+    border: 2px solid var(--black-color);
+    color: var(--black-color);
     border-radius: 20px;
     font-size: 13px;
     width: 50%;
@@ -543,7 +652,7 @@ header {
 }
 
 .carousel-slide .carousel-slide__content a:hover {
-    background: linear-gradient(45deg, #0ef, #c800ff);
+    background:var(--black-color);
     color: #fff;
 }
 
@@ -1213,7 +1322,7 @@ footer .contenedor-footer{
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 20px;
+    gap: 10px;
 }
 
 .footer__social .footer__social-redes a{
@@ -1223,17 +1332,21 @@ footer .contenedor-footer{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--black-color);
 }
 
 .footer__social .footer__social-redes a svg{
     width: 20px;
     height: 20px;
+    color:#fff;
 }
 
 .footer__social .footer__social-redes a:hover{
     background-color: #dfdfdf;
+}
+
+.footer__social .footer__social-redes a:hover svg{
+    color: #000;
 }
 
 .footer__social .footer__social-lenguaje{
@@ -1244,10 +1357,11 @@ footer .contenedor-footer{
 }
 
 .footer__social .footer__social-lenguaje select{
-    padding: 10px 30px;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #000;
+    padding: 9px 40px;
+    border-radius: 4px;
+    background-color: var(--black-color);
+    color: #fff;
+    border: none;
 }
 
 .footer__social .footer__social-lenguaje select option{
@@ -1307,6 +1421,10 @@ footer .contenedor-footer{
 }
 
 @media(max-width:1080px) {
+
+    header{
+        height: auto;
+    }
 
     .nav {
         flex-direction: column-reverse;
@@ -1410,7 +1528,7 @@ footer .contenedor-footer{
         width: 100%;
         padding: 0px;
         height: 200px;
-        margin-top: 150px;
+        margin-top: 200px;
     }
 
     .contenedor-carousel .carousel-slide .carousel-slide__content {
