@@ -15,37 +15,116 @@
     <main class="container-login">
       <div class="login__card">
         <div class="login__image">
-          <img src="../images/logo.jpg" alt="" class="login__img" />
+          <img src="../images/logo.png" alt="Logo" class="login__img" />
         </div>
         <div class="login">
           <h1 class="login__title">Iniciar sesión</h1>
-          <form action="login.php" method="post" class="login__form">
+          <form
+            action="login.php"
+            method="post"
+            class="login__form"
+            id="form-login"
+          >
             <div class="form-group">
               <span class="login__icon">
-                <i class="bx bx-user"></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  color="#000000"
+                  fill="none"
+                >
+                  <path
+                    d="M15.6 8.40033V12.9003C15.6 14.3915 16.8088 15.6003 18.3 15.6003C19.7912 15.6003 21 14.3915 21 12.9003V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C14.0265 21 15.8965 20.3302 17.4009 19.2M15.6 12.0003C15.6 13.9886 13.9882 15.6003 12 15.6003C10.0118 15.6003 8.4 13.9886 8.4 12.0003C8.4 10.0121 10.0118 8.40033 12 8.40033C13.9882 8.40033 15.6 10.0121 15.6 12.0003Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
               </span>
               <input
                 type="text"
-                name="username"
+                name="email"
+                id="email"
                 class="login__input"
-                placeholder="Usuario"
+                placeholder="Correo electrónico"
               />
             </div>
             <div class="form-group">
               <span class="login__icon">
-                <i class="bx bx-key"></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  color="#000000"
+                  fill="none"
+                >
+                  <path
+                    d="M13.9928 15L14 15M10 15L10.0072 15"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5 15C5 11.134 8.13401 8 12 8C15.866 8 19 11.134 19 15C19 18.866 15.866 22 12 22C8.13401 22 5 18.866 5 15Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M16.5 9.5V6.5C16.5 4.01472 14.4853 2 12 2C9.51472 2 7.5 4.01472 7.5 6.5V9.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
               </span>
               <input
                 type="text"
                 name="username"
+                id="username"
                 class="login__input"
                 placeholder="Contraseña"
               />
             </div>
+            <div class="remember-me">
+              <input type="checkbox" name="remember" id="remember" />
+              <label for="remember">Recuérdame</label>
+            </div>
             <button type="submit" class="login__button">
-              <i class="bx bx-log-in"></i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M14 3.09502C13.543 3.03241 13.0755 3 12.6 3C7.29807 3 3 7.02944 3 12C3 16.9706 7.29807 21 12.6 21C13.0755 21 13.543 20.9676 14 20.905"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M13.5 14.5C12.9943 14.0085 11 12.7002 11 12M13.5 9.5C12.9943 9.99153 11 11.2998 11 12M11 12L21 12"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
               Iniciar sesión
             </button>
+            <div class="login__forgot">
+              <a href="#" class="login__link">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="login-register">
+              <span class="login__text">¿No tienes una cuenta?</span>
+              <a href="register.php" class="login__link">Regístrate</a>
+            </div>
           </form>
           <div class="login__social">
             <a href="#" class="login__social-facebook">
