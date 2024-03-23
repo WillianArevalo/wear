@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         spaceBetween: 30,
         pagination: {
             el: ".swiper-pagination",
-            clickable: true,
+            clickable: true
         },
         breakpoints:{
             320:{
