@@ -1434,8 +1434,8 @@ header {
 }
 
 .cart__item-cantidad button svg{
-    width: 23px;
-    height: 23px;
+    width: 19px;
+    height: 19px;
 }
 
 .cart__item-cantidad button:hover svg{
@@ -1456,6 +1456,75 @@ header {
     font-size: 18px;
     font-weight: bold;
     color: #0678a5;
+}
+
+.cart__total{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    width: max-content;
+    margin-left: auto;
+    padding: 10px 30px;
+    width: 300px;
+}
+
+.cart__total div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 5px;
+}
+
+.cart__total p{
+    font-size: 17px;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart__total .cart__total-descuento{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #dfdfdf;
+}
+
+.cart__total .total-price{
+    font-size: 22px;
+    color: #0678a5;    
+}
+
+.cart__button-pay{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    width: max-content;
+    margin-left: auto;
+    width: 300px;
+}
+
+.cart__button-pay a{
+    padding: 10px 20px;
+    border: none;
+    background: linear-gradient(to right, var(--primary-color), var(--tertiary-color));
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
 }
 
 /* FOOTER */
@@ -1999,6 +2068,19 @@ footer .contenedor-footer {
 
 @media(max-width:640px) {
 
+    .container-login .login .login__title{
+        font-size: 25px;
+    }
+
+    .container-login .login{
+        margin: 40px;
+        width: 80%;
+    }
+
+    .container-login .login .login__form {
+        width: 300px;
+    }
+
     .grid-ofertas__grid-1 .grid-1__content-text h1 {
         font-size: 15px;
     }
@@ -2026,6 +2108,7 @@ footer .contenedor-footer {
     .select-selected {
         width: 100px;
     }
+    
 }
 
 @media (max-width:425px) {

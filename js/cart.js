@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if(cantidad == 1){
                 cartItem.remove();
+                actualizarTotalProductos();
             }
 
             cantidad = parseInt(cantidadInput.value);
@@ -39,11 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         btnRemove.addEventListener('click', () => {
             cartItem.remove();
+            actualizarTotalProductos();
         });
 
-        if(cantidad == 0){
-            cartItem.remove();
-        }
     
         // Función para actualizar el subtotal del artículo
         function actualizarSubtotal(cantidad, precioUnidad, cartItem) {
@@ -53,23 +52,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })
 
+   
+
     function actualizarTotalProductos() {
         // Obtener todos los elementos cart__item
         const cartItems = document.querySelectorAll('.cart__item');
         const totalProductos = document.getElementById('total-productos');
+        const totalP = document.getElementById('total-price');
     
         let total = 0;
-    
+        let totalPrice = 0; 
         // Iterar sobre cada cart__item
         cartItems.forEach(cartItem => {
             const cantidadInput = cartItem.querySelector('input[type="text"]');
             const cantidad = parseInt(cantidadInput.value);
+    
+            // Obtener el precio de cada producto
+            const precioProducto = parseFloat(cartItem.querySelector('.cart__item-precio p').innerText.replace('$', ''));
+    
+            // Calcular el precio total por producto y sumarlo al total
+            totalPrice += cantidad * precioProducto;
             total += cantidad;
         });
     
-        // Actualizar el contenido del span con el total de productos
+        // Actualizar el contenido del span con el total de productos y el precio total
         totalProductos.innerText = total;
+        totalP.innerText = `$${totalPrice.toFixed(2)}`; // Asegurarse de que el precio se muestre con dos decimales
     }
+    
 
     actualizarTotalProductos();
 
