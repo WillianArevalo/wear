@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wear | Store Online</title>
-    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="icons/css/boxicons.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
     <header>
@@ -47,7 +52,7 @@
         </ul>
         <div class="nav__user">
           <img src="images/logo.png" alt="Logo" class="nav__logo" />
-          <a href="" class="link__cart">
+          <a href="pages/cart.html" class="link__cart">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -102,7 +107,7 @@
     <main class="main" id="main">
       <div class="contenedor-general">
         <!-- SECTION CAROUSEL -->
-        <section class="contenedor-carousel">
+        <section class="contenedor-carousel scroll-reveal">
           <button id="prevBtn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
               <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
@@ -172,23 +177,24 @@
         <!-- END SECTION CAROUSEL -->
 
         <!-- SECTION CATEGORIAS -->
-        <section class="contenedor-categorias">
-          <a href="#" class="categorias__hombre"><p>Hombres</p></a>
-          <a href="#" class="categorias__mujer"><p>Mujeres</p></a>
-          <a href="#" class="categorias__niños"><p>Niños</p></a>
-          <a href="#" class="categorias__acesorios"><p>Accesorios</p></a>
+        <section class="contenedor-categorias scroll-reveal">
+          <a href="#" class="categorias__hombre scroll-reveal"><p>Hombres</p></a>
+          <a href="#" class="categorias__mujer scroll-reveal"><p>Mujeres</p></a>
+          <a href="#" class="categorias__niños scroll-reveal"><p>Niños</p></a>
+          <a href="#" class="categorias__acesorios scroll-reveal"><p>Accesorios</p></a>
         </section>
         <!-- END SECTION CATEGORIAS -->
 
         <!-- SECTION OFERTAS -->
-        <section class="contenedor-ofertas">
-          <div class="contenedor-ofertas__title">
+        <section class="contenedor-ofertas scroll-reveal">
+          <div class="contenedor-ofertas__title scroll-reveal">
             <h1>Mejores ofertas</h1>
           </div>
-          <div class="grid-ofertas">
-            <div class="grid-ofertas__grid-1">
+          <div class="grid-ofertas scroll-reveal">
+            <div class="grid-ofertas__grid-1 scroll-reveal">
               <div class="grid-1__image">
                 <img
+                  decoding="async"
                   loading="lazy"
                   src="images/grid1.webp"
                   alt="Imagen oferta"
@@ -204,9 +210,10 @@
                 </p>
               </div>
             </div>
-            <div class="grid-ofertas__grid-2">
+            <div class="grid-ofertas__grid-2 scroll-reveal">
               <div class="grid-2__image">
                 <img
+                  decoding="async"
                   loading="lazy"
                   src="images/grid2.webp"
                   alt="Imagen oferta"
@@ -221,13 +228,14 @@
                 </p>
               </div>
             </div>
-            <div class="grid-ofertas__grid-3">
+            <div class="grid-ofertas__grid-3 scroll-reveal">
               <div class="grid-3__content-text">
                 <h1>Encuentra ofertas en ropa para niños</h1>
                 <p>Desde accesorios, hasta calzado y ropa para niños.</p>
               </div>
               <div class="grid-3__image">
                 <img
+                  decoding="async"
                   loading="lazy"
                   src="images/grid3.webp"
                   alt="Imagen oferta"
@@ -235,7 +243,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper mySwiper">
+          <div class="swiper mySwiper scroll-reveal">
             <h2>Ofertas</h2>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -243,6 +251,7 @@
                   <div class="ribbon"><span>25%</span></div>
                   <div class="card__header">
                     <img
+                      decoding="async"
                       loading="lazy"
                       src="images/productos/camisa1.webp"
                       alt="Camisa casual para hombre"
@@ -330,6 +339,7 @@
                   <div class="ribbon"><span>50%</span></div>
                   <div class="card__header">
                     <img
+                      decoding="async"
                       loading="lazy"
                       src="images/productos/camisa2.webp"
                       alt="Sudadera negra"
@@ -417,6 +427,7 @@
                   <div class="ribbon"><span>75%</span></div>
                   <div class="card__header">
                     <img
+                      decoding="async"
                       loading="lazy"
                       src="images/productos/camisa3.webp"
                       alt="Camisa negra"
@@ -504,6 +515,7 @@
                   <div class="ribbon"><span>20%</span></div>
                   <div class="card__header">
                     <img
+                      decoding="async"
                       loading="lazy"
                       src="images/productos/vestido.webp"
                       alt="Vestido azul"
@@ -589,6 +601,7 @@
                   <div class="ribbon"><span>50%</span></div>
                   <div class="card__header">
                     <img
+                      decoding="async"
                       loading="lazy"
                       src="images/productos/conjuntocompleto.webp"
                       alt="Conjunto completo"
@@ -677,6 +690,7 @@
                   <div class="ribbon"><span>20%</span></div>
                   <div class="card__header">
                     <img
+                      decoding="async"
                       loading="lazy"
                       src="images/productos/chaqueta.webp"
                       alt=""
@@ -765,8 +779,8 @@
         <!-- END SECTION OFERTAS -->
 
         <!-- SECTION POPULARES -->
-        <section class="contenedor-populares">
-          <div class="contenedor-populares__title">
+        <section class="contenedor-populares scroll-reveal">
+          <div class="contenedor-populares__title scroll-reveal">
             <h2>Populares</h2>
             <div class="custom-select">
               <div class="custom-select__content">
@@ -789,6 +803,7 @@
                 <div class="card">
                   <div class="card__header">
                     <img
+                      decoding="async"
                       loading="lazy"
                       src="images/productos/camisa1.webp"
                       alt="Camisa casual para hombre"
@@ -874,6 +889,7 @@
                 <div class="card">
                   <div class="card__header">
                     <img
+                      decoding="async"
                       loading="lazy"
                       src="images/productos/camisa2.webp"
                       alt="Sudadera negra"
@@ -959,6 +975,7 @@
                 <div class="card">
                   <div class="card__header">
                     <img
+                      decoding="async"
                       loading="lazy"
                       src="images/productos/camisa3.webp"
                       alt="Camisa negra"
@@ -1044,6 +1061,7 @@
                 <div class="card">
                   <div class="card__header">
                     <img
+                      decoding="async"
                       loading="lazy"
                       src="images/productos/vestido.webp"
                       alt="Vestido azul"
@@ -1127,6 +1145,7 @@
                 <div class="card">
                   <div class="card__header">
                     <img
+                      decoding="async"
                       loading="lazy"
                       src="images/productos/conjuntocompleto.webp"
                       alt="Conjunto completo"
@@ -1213,6 +1232,7 @@
                 <div class="card">
                   <div class="card__header">
                     <img
+                      decoding="async"
                       loading="lazy"
                       src="images/productos/chaqueta.webp"
                       alt=""
@@ -1301,9 +1321,9 @@
       </div>
     </main>
     <footer>
-      <div class="contenedor-footer">
-        <div class="footer__col-1">
-          <div class="footer__contacto">
+      <div class="contenedor-footer scroll-reveal">
+        <div class="footer__col-1 scroll-reveal">
+          <div class="footer__contacto scroll-reveal">
             <h3>Contacto</h3>
             <p>
               <svg
@@ -1349,7 +1369,7 @@
             </p>
             <a href="">Contactanos</a>
           </div>
-          <div class="footer__info">
+          <div class="footer__info scroll-reveal">
             <div class="footer__info-links">
               <a href="#">Inicio</a>
               <a href="#">Hombres</a>
@@ -1358,7 +1378,7 @@
               <a href="#">Ofertas</a>
             </div>
           </div>
-          <div class="footer__help">
+          <div class="footer__help scroll-reveal">
             <div class="footer__help-title">
               <h3>Ayuda</h3>
             </div>
@@ -1370,10 +1390,10 @@
             </div>
           </div>
         </div>
-        <div class="footer__col-2">
-          <div class="footer__social">
-            <div class="footer__social-redes">
-              <a href="#">
+        <div class="footer__col-2 scroll-reveal">
+          <div class="footer__social scroll-reveal">
+            <div class="footer__social-redes scroll-reveal">
+              <a href="#" class="scroll-reveal">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -1396,7 +1416,7 @@
                   />
                 </svg>
               </a>
-              <a href="#">
+              <a href="#" class="scroll-reveal">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -1424,7 +1444,7 @@
                   />
                 </svg>
               </a>
-              <a href="#">
+              <a href="#" class="scroll-reveal">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -1441,7 +1461,7 @@
                   />
                 </svg>
               </a>
-              <a href="#">
+              <a href="#" class="scroll-reveal">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -1463,7 +1483,7 @@
                 </svg>
               </a>
             </div>
-            <div class="footer__social-lenguaje">
+            <div class="footer__social-lenguaje scroll-reveal">
               <label for="lenguaje">Lenguaje:</label>
               <select name="lenguaje" id="lenguaje">
                 <option value="es">Español</option>
@@ -1471,7 +1491,7 @@
               </select>
             </div>
           </div>
-          <div class="footer__copy">
+          <div class="footer__copy scroll-reveal">
             <p>&copy; 2024 Willian Arevalo.</p>
             <div class="footer__copy-links">
                 <a href="">Terminos</a>
@@ -1489,5 +1509,6 @@
     <script src="js/script.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/select.js"></script>
+    <script src="js/scrollreveal.js"></script>    
   </body>
 </html>
