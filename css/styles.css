@@ -98,6 +98,10 @@ body {
     flex-direction: column;
 }
 
+body.active {
+    overflow: hidden;
+}
+
 header {
     width: 100%;
     z-index: 100;
@@ -1981,6 +1985,11 @@ footer .contenedor-footer {
     .footer__info{
         margin: 20px 0px 20px 0px;
     }
+
+    .footer__social{
+        margin: 20px 0px 20px 0px;
+    }
+
 
     .footer__contacto{
         margin-top: 40px;
