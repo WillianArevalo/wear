@@ -71,19 +71,20 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   var select = document.querySelector(".select__content");
 
-  select.addEventListener("click", function () {
-    //Obtiene las opciones del select
-    var selectItems = this.parentNode.querySelector(".select-items-tel");
+  if (select) {
+    select.addEventListener("click", function () {
+      //Obtiene las opciones del select
+      var selectItems = this.parentNode.querySelector(".select-items-tel");
 
-    selectItems.classList.toggle("select-hide");
+      selectItems.classList.toggle("select-hide");
 
-    if (!selectItems.classList.contains("select-hide")) {
-      selectItems.style.display = "block";
-    } else {
-      selectItems.style.display = "none";
-    }
-  });
-
+      if (!selectItems.classList.contains("select-hide")) {
+        selectItems.style.display = "block";
+      } else {
+        selectItems.style.display = "none";
+      }
+    });
+  }
   var options = document.querySelectorAll(".select-items-tel div");
 
   for (var i = 0; i < options.length; i++) {
