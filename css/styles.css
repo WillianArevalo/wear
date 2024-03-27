@@ -170,6 +170,7 @@ header {
   left: 0;
   height: 70px;
   background: var(--black);
+  border-bottom: 1px solid var(--black-50);
 }
 
 .nav {
@@ -186,6 +187,7 @@ header {
   height: 50px;
   border-radius: 50%;
   object-fit: contain;
+  border: 1px solid var(--black-50);
 }
 
 .nav__links {
@@ -359,6 +361,7 @@ header {
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
+  border: 1px solid var(--black-50);
 }
 
 .container-login .login__image img {
@@ -374,7 +377,8 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var(--vulcan-950);
+  background-color: transparent;
+  border: 1px solid var(--black-50);
   padding: 70px 70px 30px 70px;
   border-radius: 10px;
 }
@@ -397,7 +401,7 @@ header {
 }
 
 .container-login .login .login__form .form-group {
-  background-color: var(--white);
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -413,6 +417,7 @@ header {
   color: rgb(243, 54, 54);
   font-size: 14px;
   font-weight: bold;
+  font-family: "Quicksand", sans-serif;
 }
 
 .container-login .login .login__form .form-group .login__icon {
@@ -422,13 +427,14 @@ header {
   width: 100%;
   height: 40px;
   flex: 1;
-  background: var(--gray);
+  background: transparent;
+  border: 1px solid var(--black-50);
 }
 
 .container-login .login .login__form .form-group .login__icon svg {
   width: 20px;
   height: 20px;
-  color: var(--black-50);
+  color: var(--gray);
 }
 
 .container-login .login .login__form input {
@@ -438,12 +444,9 @@ header {
   outline: none;
   background-color: transparent;
   font-size: 15px;
-  margin-left: 10px;
-  color: var(--black);
-}
-
-.container-login .login .login__form input::placeholder {
+  padding: 10px;
   color: var(--gray);
+  border: 1px solid var(--black-50);
 }
 
 .container-login .login .login__form .remember-me {
@@ -1398,6 +1401,7 @@ header {
   border: 1px solid var(--black-50);
   width: 100%;
   position: relative;
+  padding: 15px;
 }
 
 .cart__item .cart__item-minus {
