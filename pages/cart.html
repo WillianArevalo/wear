@@ -17,7 +17,9 @@
     <header>
       <nav class="nav">
         <ul class="nav__links" id="navbar">
-          <img src="../images/logo.png" alt="Logo" class="nav__logo" />
+          <li>
+            <img src="../images/logo.png" alt="Logo" class="nav__logo" />
+          </li>
           <li class="nav__links-link">
             <a href="../index.html" class="active">Inicio</a>
           </li>
@@ -91,10 +93,14 @@
                 stroke-width="1.5"
               />
             </svg>
-            <span id="total-productos">3</span>
+            <span>3</span>
           </a>
           <a href="login.html" class="link__login">Inicia sesión</a>
-          <button class="button-hamburger" id="button-hamburger">
+          <button
+            class="button-hamburger"
+            id="button-hamburger"
+            title="Button nav hmaburger"
+          >
             <i class="bx bx-menu" id="icon-hamburger"></i>
           </button>
         </div>
@@ -117,7 +123,10 @@
           </div>
           <div class="cart__items scroll-reveal">
             <div class="cart__item scroll-reveal">
-              <button class="cart__item-minus btnRemove">
+              <button
+                class="cart__item-minus btnRemove"
+                title="button remove-x"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -150,7 +159,7 @@
               </div>
               <div class="cart__item-content">
                 <div class="cart__item-cantidad">
-                  <button class="btnPlus">
+                  <button class="btnPlus" title="button plus cart">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -168,8 +177,13 @@
                       />
                     </svg>
                   </button>
-                  <input type="text" readonly value="1" min="1" max="10" />
-                  <button class="btnMinus">
+                  <input
+                    type="text"
+                    readonly
+                    value="1"
+                    title="cantidad producto"
+                  />
+                  <button class="btnMinus" title="button minus cart">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -195,7 +209,10 @@
               </div>
             </div>
             <div class="cart__item scroll-reveal">
-              <button class="cart__item-minus btnRemove">
+              <button
+                class="cart__item-minus btnRemove"
+                title="button remove-x"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -228,7 +245,7 @@
               </div>
               <div class="cart__item-content">
                 <div class="cart__item-cantidad">
-                  <button class="btnPlus">
+                  <button class="btnPlus" title="button plus cart">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -246,8 +263,13 @@
                       />
                     </svg>
                   </button>
-                  <input type="text" readonly value="1" min="1" max="10" />
-                  <button class="btnMinus">
+                  <input
+                    type="text"
+                    readonly
+                    value="1"
+                    title="cantidad producto"
+                  />
+                  <button class="btnMinus" title="button minus cart">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -273,7 +295,10 @@
               </div>
             </div>
             <div class="cart__item scroll-reveal">
-              <button class="cart__item-minus btnRemove">
+              <button
+                class="cart__item-minus btnRemove"
+                title="button remove-x"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -306,7 +331,7 @@
               </div>
               <div class="cart__item-content">
                 <div class="cart__item-cantidad">
-                  <button class="btnPlus">
+                  <button class="btnPlus" title="button plus cart">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -324,8 +349,13 @@
                       />
                     </svg>
                   </button>
-                  <input type="text" readonly value="1" />
-                  <button class="btnMinus">
+                  <input
+                    type="text"
+                    readonly
+                    value="1"
+                    title="cantidad producto"
+                  />
+                  <button class="btnMinus" title="button minus cart">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -463,7 +493,7 @@
         <div class="footer__col-2 scroll-reveal">
           <div class="footer__social scroll-reveal">
             <div class="footer__social-redes scroll-reveal">
-              <a href="#" class="scroll-reveal">
+              <a href="#" class="scroll-reveal" title="link-facebook">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -486,7 +516,7 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="scroll-reveal">
+              <a href="#" class="scroll-reveal" title="link-instagram">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -514,7 +544,7 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="scroll-reveal">
+              <a href="#" class="scroll-reveal" title="link-x">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -531,7 +561,7 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="scroll-reveal">
+              <a href="#" class="scroll-reveal" title="link-youtube">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"

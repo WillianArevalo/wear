@@ -18,7 +18,9 @@
     <header>
       <nav class="nav">
         <ul class="nav__links" id="navbar">
-          <img src="../images/logo.png" alt="Logo" class="nav__logo" />
+          <li>
+            <img src="../images/logo.png" alt="Logo" class="nav__logo" />
+          </li>
           <li class="nav__links-link">
             <a href="../index.html" class="active">Inicio</a>
           </li>
@@ -95,7 +97,11 @@
             <span>3</span>
           </a>
           <a href="login.html" class="link__login">Inicia sesión</a>
-          <button class="button-hamburger" id="button-hamburger">
+          <button
+            class="button-hamburger"
+            id="button-hamburger"
+            title="Button nav hmaburger"
+          >
             <i class="bx bx-menu" id="icon-hamburger"></i>
           </button>
         </div>
@@ -557,7 +563,13 @@
                           />
                         </svg>
                       </div>
-                      <input type="month" id="mes" name="mes" required />
+                      <input
+                        type="month"
+                        id="mes"
+                        name="mes"
+                        required
+                        placeholder="Selecciona el mes de expiración"
+                      />
                     </div>
                     <div class="form-pago__group-input">
                       <div class="form-pago__icon">
@@ -681,7 +693,7 @@
                   </button>
                 </div>
               </div>
-              <div class="tab-content" id="tab2" style="display: none">
+              <div class="tab-content" id="tab2">
                 <div class="paypal" id="paypal">
                   <h3>Pagar con PayPal</h3>
                 </div>
@@ -767,7 +779,7 @@
         <div class="footer__col-2 scroll-reveal">
           <div class="footer__social scroll-reveal">
             <div class="footer__social-redes scroll-reveal">
-              <a href="#" class="scroll-reveal">
+              <a href="#" class="scroll-reveal" title="link-facebook">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -790,7 +802,7 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="scroll-reveal">
+              <a href="#" class="scroll-reveal" title="link-instagram">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -818,7 +830,7 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="scroll-reveal">
+              <a href="#" class="scroll-reveal" title="link-x">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -835,7 +847,7 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="scroll-reveal">
+              <a href="#" class="scroll-reveal" title="link-youtube">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
