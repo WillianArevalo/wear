@@ -281,9 +281,24 @@ header {
   object-fit: cover;
 }
 
+.button-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  display: none;
+}
+
+.nav__user .nav__logo {
+  display: none;
+}
+
 /* --- END HEADER - NAVBAR --- */
 
-/* LOGIN */
+/* LOGIN.HTML */
 .container-login {
   height: 100vh;
   background: var(--black);
@@ -571,22 +586,7 @@ header {
   background-color: #f35d43;
 }
 
-.button-hamburger {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  border: none;
-  background-color: transparent;
-  color: var(--white);
-  display: none;
-}
-
-.nav__user .nav__logo {
-  display: none;
-}
-
-/* END LOGIN */
+/* END LOGIN.HTML */
 
 /* MAIN */
 
@@ -2514,6 +2514,289 @@ header {
 
 /* END PRODUCT-SINGLE.HTML */
 
+/*  RGISTER.HTML */
+
+.container-register {
+  height: 100vh;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-register .register__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 5px;
+  flex-direction: column;
+  margin-bottom: 100px;
+  width: 100%;
+}
+
+.container-register .register__image {
+  width: 150px;
+  height: 150px;
+  background: var(--black);
+  border-radius: 50%;
+  position: relative;
+  top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border: 1px solid var(--black-50);
+}
+
+.container-register .register__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.container-register .register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  border: 1px solid var(--black-50);
+  padding: 70px 0px 20px 0px;
+  width: 700px;
+  border-radius: 10px;
+}
+
+.container-register .register .register__title {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--white);
+  margin-top: 20px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.container-register .register .register__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  padding: 10px 40px;
+}
+
+.container-register .register .register__form .form-group {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.container-register .register .register__form .form-group .form-group__input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 1px solid var(--black-50);
+}
+
+.container-register .register .register__form .form-group .register__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  flex: 1;
+  background: transparent;
+  border: 1px solid var(--black-50);
+}
+
+.container-register .register .register__form .form-group .register__icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--gray);
+}
+
+.container-register .register .register__form input {
+  flex: 6;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 15px;
+  padding: 10px;
+  color: var(--gray);
+  border: 1px solid var(--black-50);
+}
+
+.container-register .register .register__form button {
+  color: var(--gray);
+  cursor: pointer;
+  border: 1px solid var(--gray);
+  padding: 10px;
+  font-weight: bold;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  background: transparent;
+  transition: 0.2s ease;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+.container-register .register .register__form button:hover {
+  background: var(--gray);
+  color: var(--black);
+}
+
+.container-register .register .register__form button svg {
+  width: 25px;
+  height: 25px;
+  color: var(--gray);
+}
+
+.container-register .register .register__form button:hover svg {
+  color: var(--black);
+}
+
+.container-register .register .register__form .register__forgot {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.container-register .register .register__form .register__forgot a {
+  color: var(--white);
+  font-weight: bold;
+  position: relative;
+}
+
+.container-register .register .register__form .register__forgot a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 100%;
+  width: 0;
+  height: 3px;
+  background-color: var(--white);
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.container-register .register .register__form .register__forgot a:hover {
+  color: var(--white);
+}
+
+.container-register
+  .register
+  .register__form
+  .register__forgot
+  a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.container-register .register .register__form .register-register {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.container-register .register .register__form .register-register span {
+  color: var(--turquoise-blue-600);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container-register .register .register__form .register-register a {
+  color: var(--white);
+  position: relative;
+  font-size: 14px;
+}
+
+.container-register .register .register__form .register-register a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 100%;
+  width: 0;
+  height: 3px;
+  background-color: var(--white);
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.container-register .register .register__form .register-register a:hover {
+  color: var(--white);
+}
+
+.container-register
+  .register
+  .register__form
+  .register-register
+  a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.register__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.register__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--white);
+  color: var(--vulca-950);
+  font-size: 20px;
+  transition: 0.2s ease;
+}
+
+.register__social .register__social-facebook {
+  background-color: #3b5998;
+  color: var(--white);
+}
+
+.register__social .register__social-google {
+  background-color: #db4437;
+  color: var(--white);
+}
+
+.register__social .register__social-twitter {
+  background-color: #000;
+  color: var(--white);
+  border: 1px solid var(--black-50);
+}
+
+.register__social .register__social-twitter:hover {
+  background-color: #0f0f0f;
+}
+
+.register__social .register__social-facebook:hover {
+  background-color: #426fca;
+}
+
+.register__social .register__social-google:hover {
+  background-color: #f35d43;
+}
+
+/* END REGISTER.HTML */
+
 /* FOOTER */
 
 footer {
@@ -3001,6 +3284,19 @@ footer .contenedor-footer {
 }
 
 @media (max-width: 800px) {
+  .container-register .register {
+    width: 600px;
+  }
+
+  .container-register .register__image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .container-register .register .register__form .form-group {
+    flex-direction: column;
+  }
+
   .contenedor-carousel .carousel-slide .carousel-slide__content {
     margin: 10px auto;
     width: 90%;
@@ -3130,11 +3426,16 @@ footer .contenedor-footer {
 }
 
 @media (max-width: 640px) {
+  .container-register .register {
+    width: 500px;
+  }
+
   .container-login .login__image {
     top: 120px;
   }
 
-  .container-login .login .login__title {
+  .container-login .login .login__title,
+  .container-register .register .register__title {
     font-size: 25px;
   }
 
@@ -3221,6 +3522,10 @@ footer .contenedor-footer {
 }
 
 @media (max-width: 565px) {
+  .container-register .register {
+    width: 450px;
+  }
+
   .product-single__images .product-single__images-thumbs {
     flex-direction: column;
   }
@@ -3239,6 +3544,31 @@ footer .contenedor-footer {
 }
 
 @media (max-width: 500px) {
+  .container-register {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container-register .register {
+    border: none;
+    border-radius: 0px;
+    padding: 40px 0px 20px 0px;
+    border-top: 1px solid var(--black-50);
+  }
+
+  .container-register .register__card {
+    margin-bottom: 0px;
+    height: 100%;
+  }
+
+  .container-register .register__image {
+    top: 60px;
+  }
+
+  .container-register .register .register__title {
+    margin-top: 40px;
+  }
+
   .container-login .login .login__title {
     font-size: 20px;
   }
@@ -3278,6 +3608,10 @@ footer .contenedor-footer {
 }
 
 @media (max-width: 400px) {
+  .container-register .register {
+    width: 350px;
+  }
+
   .nav__user .link__login {
     width: 40px;
     height: 40px;
