@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wear | Store Online</title>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../icons/css/boxicons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body id="body">
+    <header>
+      <nav class="nav">
+        <ul class="nav__links" id="navbar">
+          <li>
+            <img src="../images/logo.png" alt="Logo" class="nav__logo" />
+          </li>
+          <li class="nav__links-link">
+            <a href="../index.html" class="active">Inicio</a>
+          </li>
+          <li class="nav__links-link nav__dropdown">
+            <a href="#"> Hombre</a>
+            <ul class="submenu">
+              <li><a href="#">Shorts</a></li>
+              <li><a href="#">Camisas</a></li>
+              <li><a href="#">Pantalones</a></li>
+            </ul>
+          </li>
+          <li class="nav__links-link nav__dropdown">
+            <a href="#"> Mujer </a>
+            <ul class="submenu">
+              <li><a href="#">Camisas</a></li>
+              <li><a href="#">Pantalones</a></li>
+              <li><a href="#">Vestidos</a></li>
+              <li><a href="#">Tops</a></li>
+              <li><a href="#">Shorts</a></li>
+            </ul>
+          </li>
+          <li class="nav__links-link">
+            <a href="#"> Niños </a>
+          </li>
+          <li class="nav__links-link">
+            <a href="#"> Ofertas </a>
+          </li>
+        </ul>
+        <div class="nav__user">
+          <img src="../images/logo.png" alt="Logo" class="nav__logo" />
+          <a href="cart.html" class="link__cart">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M8 16H15.2632C19.7508 16 20.4333 13.1808 21.261 9.06908C21.4998 7.88311 21.6192 7.29013 21.3321 6.89507C21.045 6.5 20.4947 6.5 19.3941 6.5H6"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="10.5"
+                cy="20.5"
+                r="1.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <circle
+                cx="17.5"
+                cy="20.5"
+                r="1.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+            <span>3</span>
+          </a>
+          <a href="login.html" class="link__login">Inicia sesión</a>
+          <button
+            class="button-hamburger"
+            id="button-hamburger"
+            title="Button nav hmaburger"
+          >
+            <i class="bx bx-menu" id="icon-hamburger"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="main" id="main">
+      <div class="contenedor-general">
+        <div class="contenedor-product-single">
+          <div class="product-single__images">
+            <div class="product-single__images-main">
+              <img
+                src="../images/productos/conjuntocompleto.webp"
+                alt="Product"
+                class="product-single__images-main-img"
+                id="main-imagen"
+              />
+            </div>
+            <div class="product-single__images-thumbs">
+              <img
+                src="../images/productos/camisa1.webp"
+                alt="Product"
+                class="product-single__images-thumbs-img"
+              />
+              <img
+                src="../images/productos/camisa2.webp"
+                alt="Product"
+                class="product-single__images-thumbs-img"
+              />
+              <img
+                src="../images/productos/camisa3.webp"
+                alt="Product"
+                class="product-single__images-thumbs-img"
+              />
+              <img
+                src="../images/productos/chaqueta.webp"
+                alt="Product"
+                class="product-single__images-thumbs-img"
+              />
+              <img
+                src="../images/productos/conjuntocompleto.webp"
+                alt="Product"
+                class="product-single__images-thumbs-img"
+              />
+              <img
+                src="../images/productos/vestido.webp"
+                alt="Product"
+                class="product-single__images-thumbs-img"
+              />
+            </div>
+          </div>
+          <div class="product-single__info">
+            <div class="product-single__info-title">
+              <div>
+                <h2>Camisa de vestir</h2>
+                <p>Camisa de vestir para hombre</p>
+              </div>
+              <div class="product-single__info-price">
+                <h3>$25.00</h3>
+              </div>
+            </div>
+            <div class="product-single__info-colors">
+              <h4>Colores</h4>
+              <div class="product-single__info-colors-color">
+                <div class="product-single__info-colors-color-item blue"></div>
+                <div class="product-single__info-colors-color-item black"></div>
+                <div class="product-single__info-colors-color-item green"></div>
+                <div class="product-single__info-colors-color-item white"></div>
+              </div>
+            </div>
+            <div class="product-single__info-sizes">
+              <h4>Tallas</h4>
+              <div class="product-single__info-sizes-size">
+                <button class="product-single__info-sizes-size-item">S</button>
+                <button class="product-single__info-sizes-size-item">M</button>
+                <button class="product-single__info-sizes-size-item">L</button>
+                <button class="product-single__info-sizes-size-item">XL</button>
+              </div>
+            </div>
+            <div class="product-single__info-drop-evaluations">
+              <div class="accordion">
+                <div class="accordion-item">
+                  <button class="accordion-header">
+                    Descripción
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <div class="accordion-content">
+                    <p class="accordion-content__descripcion">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Incidunt molestias architecto quis harum? Fuga accusamus
+                      optio iusto provident, enim nostrum nesciunt, mollitia
+                      magni deleniti veniam itaque distinctio ipsam accusantium
+                      veritatis!
+                    </p>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <button class="accordion-header">
+                    Evaluaciones
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <div class="accordion-content">
+                    <div class="accordion-content__evaluaciones">
+                      <div class="accordion-content__evaluaciones-starts">
+                        <p>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            color="#000000"
+                            fill="none"
+                          >
+                            <path
+                              d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          4.5
+                        </p>
+                        <a href="#">10 reseñas</a>
+                      </div>
+                      <button>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          height="24"
+                          color="#000000"
+                          fill="none"
+                        >
+                          <path
+                            d="M20.3927 8.03168L18.6457 6.51461C17.3871 5.42153 16.8937 4.83352 16.2121 5.04139C15.3622 5.30059 15.642 6.93609 15.642 7.48824C14.3206 7.48824 12.9468 7.38661 11.6443 7.59836C7.34453 8.29742 6 11.3566 6 14.6525C7.21697 13.9065 8.43274 13.0746 9.8954 12.7289C11.7212 12.2973 13.7603 12.5032 15.642 12.5032C15.642 13.0554 15.3622 14.6909 16.2121 14.9501C16.9844 15.1856 17.3871 14.5699 18.6457 13.4769L20.3927 11.9598C21.4642 11.0293 22 10.564 22 9.99574C22 9.4275 21.4642 8.96223 20.3927 8.03168Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M10.5676 3C6.70735 3.00694 4.68594 3.10152 3.39411 4.39073C2 5.78202 2 8.02125 2 12.4997C2 16.9782 2 19.2174 3.3941 20.6087C4.78821 22 7.03198 22 11.5195 22C16.0071 22 18.2509 22 19.645 20.6087C20.6156 19.64 20.9104 18.2603 21 16"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Compartir
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <button class="accordion-header">
+                    Preguntas frecuentes
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <div class="accordion-content">
+                    <ul class="accordion-content__preguntas">
+                      <li>
+                        <a href="#">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            color="#000000"
+                            fill="none"
+                          >
+                            <circle
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                            />
+                            <path
+                              d="M10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9C14 9.39815 13.8837 9.76913 13.6831 10.0808C13.0854 11.0097 12 11.8954 12 13V13.5"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                            />
+                            <path
+                              d="M11.992 17H12.001"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          ¿Cuánto tiempo tarda en llegar el producto?
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            color="#000000"
+                            fill="none"
+                          >
+                            <circle
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                            />
+                            <path
+                              d="M10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9C14 9.39815 13.8837 9.76913 13.6831 10.0808C13.0854 11.0097 12 11.8954 12 13V13.5"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                            />
+                            <path
+                              d="M11.992 17H12.001"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          ¿Cuál es el tiempo de garantía del producto?
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            color="#000000"
+                            fill="none"
+                          >
+                            <circle
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                            />
+                            <path
+                              d="M10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9C14 9.39815 13.8837 9.76913 13.6831 10.0808C13.0854 11.0097 12 11.8954 12 13V13.5"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                            />
+                            <path
+                              d="M11.992 17H12.001"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          ¿Puedo devolver el producto si no me gusta?
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            color="#000000"
+                            fill="none"
+                          >
+                            <circle
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                            />
+                            <path
+                              d="M10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9C14 9.39815 13.8837 9.76913 13.6831 10.0808C13.0854 11.0097 12 11.8954 12 13V13.5"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                            />
+                            <path
+                              d="M11.992 17H12.001"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          ¿Cuál es el tiempo de garantía del producto?
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-single__info-button-cart">
+              <button class="button-cart" id="button-cart">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  color="#000000"
+                  fill="none"
+                >
+                  <path
+                    d="M8 16.0001H15.2632C19.7508 16.0001 20.4333 13.1809 21.261 9.06916C21.4998 7.8832 21.6192 7.29022 21.3321 6.89515C21.1034 6.58048 20.7077 6.51645 20 6.50342"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M9 6.5H17M13 10.5V2.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <circle
+                    cx="10.5"
+                    cy="20.5"
+                    r="1.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <circle
+                    cx="17.5"
+                    cy="20.5"
+                    r="1.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                </svg>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+        <section class="contenedor-relacionados scroll-reveal">
+          <div class="contenedor-relacionados__title">
+            <h2 class="scroll-reveal">Relacionados</h2>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card scroll-reveal">
+                  <div class="card__header">
+                    <img
+                      decoding="async"
+                      loading="lazy"
+                      src="../images/productos/camisa1.webp"
+                      alt="Camisa casual para hombre"
+                    />
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__body-title">Camisa casual</h3>
+                    <p class="card__body-text">
+                      Camisa casual para hombre, ideal para cualquier ocasión.
+                    </p>
+                    <p class="card__body-price">
+                      <span class="card__body-price-offer">$20.00</span>
+                    </p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="card__footer-stars">
+                      <div class="starts">
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                      </div>
+                      <p>5.0</p>
+                    </div>
+                    <div class="card__footer-buttons">
+                      <button class="button__card cart" title="button-cart">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          height="24"
+                          color="#fff"
+                          fill="none"
+                        >
+                          <path
+                            d="M8 16.0001H15.2632C19.7508 16.0001 20.4333 13.1809 21.261 9.06916C21.4998 7.8832 21.6192 7.29022 21.3321 6.89515C21.1034 6.58048 20.7077 6.51645 20 6.50342"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M9 6.5H17M13 10.5V2.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <circle
+                            cx="10.5"
+                            cy="20.5"
+                            r="1.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                          <circle
+                            cx="17.5"
+                            cy="20.5"
+                            r="1.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </button>
+                      <a href="pages/product-single.html" class="button__card"
+                        >Detalles</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card scroll-reveal">
+                  <div class="card__header">
+                    <img
+                      decoding="async"
+                      loading="lazy"
+                      src="../images/productos/camisa2.webp"
+                      alt="Sudadera negra"
+                    />
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__body-title">Sudadera negra</h3>
+                    <p class="card__body-text">
+                      Sudadera negra oversize, con logo de 705.
+                    </p>
+                    <p class="card__body-price">
+                      <span class="card__body-price-offer">$15.00</span>
+                    </p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="card__footer-stars">
+                      <div class="starts">
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                      </div>
+                      <p>5.0</p>
+                    </div>
+                    <div class="card__footer-buttons">
+                      <button class="button__card cart" title="button-cart">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          height="24"
+                          color="#fff"
+                          fill="none"
+                        >
+                          <path
+                            d="M8 16.0001H15.2632C19.7508 16.0001 20.4333 13.1809 21.261 9.06916C21.4998 7.8832 21.6192 7.29022 21.3321 6.89515C21.1034 6.58048 20.7077 6.51645 20 6.50342"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M9 6.5H17M13 10.5V2.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <circle
+                            cx="10.5"
+                            cy="20.5"
+                            r="1.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                          <circle
+                            cx="17.5"
+                            cy="20.5"
+                            r="1.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </button>
+                      <a href="pages/product-single.html" class="button__card"
+                        >Detalles</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card scroll-reveal">
+                  <div class="card__header">
+                    <img
+                      decoding="async"
+                      loading="lazy"
+                      src="../images/productos/camisa3.webp"
+                      alt="Camisa negra"
+                    />
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__body-title">Camisa negra</h3>
+                    <p class="card__body-text">
+                      Camisa negra, con logo de 705 Seven Zero Five
+                    </p>
+                    <p class="card__body-price">
+                      <span class="card__body-price-offer">$37.5</span>
+                    </p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="card__footer-stars">
+                      <div class="starts">
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star"></i>
+                      </div>
+                      <p>4.5</p>
+                    </div>
+                    <div class="card__footer-buttons">
+                      <button class="button__card cart" title="button-cart">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          height="24"
+                          color="#fff"
+                          fill="none"
+                        >
+                          <path
+                            d="M8 16.0001H15.2632C19.7508 16.0001 20.4333 13.1809 21.261 9.06916C21.4998 7.8832 21.6192 7.29022 21.3321 6.89515C21.1034 6.58048 20.7077 6.51645 20 6.50342"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M9 6.5H17M13 10.5V2.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <circle
+                            cx="10.5"
+                            cy="20.5"
+                            r="1.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                          <circle
+                            cx="17.5"
+                            cy="20.5"
+                            r="1.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </button>
+                      <a href="pages/product-single.html" class="button__card"
+                        >Detalles</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card scroll-reveal">
+                  <div class="card__header">
+                    <img
+                      decoding="async"
+                      loading="lazy"
+                      src="../images/productos/vestido.webp"
+                      alt="Vestido azul"
+                    />
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__body-title">Vestido azul</h3>
+                    <p class="card__body-text">Vestido azul.</p>
+                    <p class="card__body-price">
+                      <span class="card__body-price-offer">$24.00</span>
+                    </p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="card__footer-stars">
+                      <div class="starts">
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                      </div>
+                      <p>5.0</p>
+                    </div>
+                    <div class="card__footer-buttons">
+                      <button class="button__card cart" title="button-cart">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          height="24"
+                          color="#fff"
+                          fill="none"
+                        >
+                          <path
+                            d="M8 16.0001H15.2632C19.7508 16.0001 20.4333 13.1809 21.261 9.06916C21.4998 7.8832 21.6192 7.29022 21.3321 6.89515C21.1034 6.58048 20.7077 6.51645 20 6.50342"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M9 6.5H17M13 10.5V2.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <circle
+                            cx="10.5"
+                            cy="20.5"
+                            r="1.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                          <circle
+                            cx="17.5"
+                            cy="20.5"
+                            r="1.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </button>
+                      <a href="pages/product-single.html" class="button__card"
+                        >Detalles</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card scroll-reveal">
+                  <div class="card__header">
+                    <img
+                      decoding="async"
+                      loading="lazy"
+                      src="../images/productos/conjuntocompleto.webp"
+                      alt="Conjunto completo"
+                    />
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__body-title">Conjunto completo</h3>
+                    <p class="card__body-text">
+                      Conjunto completo: Chaqueta amarilla, top blanco escotado
+                      y falda blanca.
+                    </p>
+                    <p class="card__body-price">
+                      <span class="card__body-price-offer">$35.00</span>
+                    </p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="card__footer-stars">
+                      <div class="starts">
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star light"></i>
+                        <i class="bx bxs-star"></i>
+                      </div>
+                      <p>4.5</p>
+                    </div>
+                    <div class="card__footer-buttons">
+                      <button class="button__card cart" title="button-cart">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          height="24"
+                          color="#fff"
+                          fill="none"
+                        >
+                          <path
+                            d="M8 16.0001H15.2632C19.7508 16.0001 20.4333 13.1809 21.261 9.06916C21.4998 7.8832 21.6192 7.29022 21.3321 6.89515C21.1034 6.58048 20.7077 6.51645 20 6.50342"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M9 6.5H17M13 10.5V2.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <circle
+                            cx="10.5"
+                            cy="20.5"
+                            r="1.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                          <circle
+                            cx="17.5"
+                            cy="20.5"
+                            r="1.5"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </button>
+                      <a href="pages/product-single.html" class="button__card"
+                        >Detalles</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+      </div>
+
+      <div id="modal-image" class="modal">
+        <span class="close" id="close-modal">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            color="#000000"
+            fill="none"
+          >
+            <path
+              d="M15 9L9 14.9996M15 15L9 9.00039"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+            />
+          </svg>
+        </span>
+        <div class="image-container-modal" id="container-modal-image">
+          <img class="modal-contenido" id="image-modal" />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="contenedor-footer scroll-reveal">
+        <div class="footer__col-1 scroll-reveal">
+          <div class="footer__contacto scroll-reveal">
+            <h3>Contacto</h3>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                color="#fff"
+                fill="none"
+              >
+                <path
+                  d="M3.77762 11.9424C2.8296 10.2893 2.37185 8.93948 2.09584 7.57121C1.68762 5.54758 2.62181 3.57081 4.16938 2.30947C4.82345 1.77638 5.57323 1.95852 5.96 2.6524L6.83318 4.21891C7.52529 5.46057 7.87134 6.08139 7.8027 6.73959C7.73407 7.39779 7.26737 7.93386 6.33397 9.00601L3.77762 11.9424ZM3.77762 11.9424C5.69651 15.2883 8.70784 18.3013 12.0576 20.2224M12.0576 20.2224C13.7107 21.1704 15.0605 21.6282 16.4288 21.9042C18.4524 22.3124 20.4292 21.3782 21.6905 19.8306C22.2236 19.1766 22.0415 18.4268 21.3476 18.04L19.7811 17.1668C18.5394 16.4747 17.9186 16.1287 17.2604 16.1973C16.6022 16.2659 16.0661 16.7326 14.994 17.666L12.0576 20.2224Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              +503 7545 6642
+            </p>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M2 6L8.91302 9.91697C11.4616 11.361 12.5384 11.361 15.087 9.91697L22 6"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2.01577 13.4756C2.08114 16.5412 2.11383 18.0739 3.24496 19.2094C4.37608 20.3448 5.95033 20.3843 9.09883 20.4634C11.0393 20.5122 12.9607 20.5122 14.9012 20.4634C18.0497 20.3843 19.6239 20.3448 20.7551 19.2094C21.8862 18.0739 21.9189 16.5412 21.9842 13.4756C22.0053 12.4899 22.0053 11.5101 21.9842 10.5244C21.9189 7.45886 21.8862 5.92609 20.7551 4.79066C19.6239 3.65523 18.0497 3.61568 14.9012 3.53657C12.9607 3.48781 11.0393 3.48781 9.09882 3.53656C5.95033 3.61566 4.37608 3.65521 3.24495 4.79065C2.11382 5.92608 2.08114 7.45885 2.01576 10.5244C1.99474 11.5101 1.99475 12.4899 2.01577 13.4756Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              awillianernesto@gmail.com
+            </p>
+            <a href="">Contactanos</a>
+          </div>
+          <div class="footer__info scroll-reveal">
+            <div class="footer__info-links">
+              <a href="#">Inicio</a>
+              <a href="#">Hombres</a>
+              <a href="#">Mujeres</a>
+              <a href="#">Niños</a>
+              <a href="#">Ofertas</a>
+            </div>
+          </div>
+          <div class="footer__help scroll-reveal">
+            <div class="footer__help-title">
+              <h3>Ayuda</h3>
+            </div>
+            <div class="footer__help-links">
+              <a href="#">Preguntas frecuentes</a>
+              <a href="#">Envíos y devoluciones</a>
+              <a href="#">Términos y condiciones</a>
+              <a href="#">Política de privacidad</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__col-2 scroll-reveal">
+          <div class="footer__social scroll-reveal">
+            <div class="footer__social-redes scroll-reveal">
+              <a href="#" class="scroll-reveal" title="link-facebook">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  color="#000000"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6.18182 10.3333C5.20406 10.3333 5 10.5252 5 11.4444V13.1111C5 14.0304 5.20406 14.2222 6.18182 14.2222H8.54545V20.8889C8.54545 21.8081 8.74951 22 9.72727 22H12.0909C13.0687 22 13.2727 21.8081 13.2727 20.8889V14.2222H15.9267C16.6683 14.2222 16.8594 14.0867 17.0631 13.4164L17.5696 11.7497C17.9185 10.6014 17.7035 10.3333 16.4332 10.3333H13.2727V7.55556C13.2727 6.94191 13.8018 6.44444 14.4545 6.44444H17.8182C18.7959 6.44444 19 6.25259 19 5.33333V3.11111C19 2.19185 18.7959 2 17.8182 2H14.4545C11.191 2 8.54545 4.48731 8.54545 7.55556V10.3333H6.18182Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="scroll-reveal" title="link-instagram">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  color="#000000"
+                  fill="none"
+                >
+                  <path
+                    d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M17.5078 6.5L17.4988 6.5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="scroll-reveal" title="link-x">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  color="#000000"
+                  fill="none"
+                >
+                  <path
+                    d="M3 21L10.5484 13.4516M21 3L13.4516 10.5484M13.4516 10.5484L8 3H3L10.5484 13.4516M13.4516 10.5484L21 21H16L10.5484 13.4516"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="scroll-reveal" title="link-youtube">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  color="#000000"
+                  fill="none"
+                >
+                  <path
+                    d="M12 20.5C13.8097 20.5 15.5451 20.3212 17.1534 19.9934C19.1623 19.5839 20.1668 19.3791 21.0834 18.2006C22 17.0221 22 15.6693 22 12.9635V11.0365C22 8.33073 22 6.97787 21.0834 5.79937C20.1668 4.62088 19.1623 4.41613 17.1534 4.00662C15.5451 3.67877 13.8097 3.5 12 3.5C10.1903 3.5 8.45489 3.67877 6.84656 4.00662C4.83766 4.41613 3.83321 4.62088 2.9166 5.79937C2 6.97787 2 8.33073 2 11.0365V12.9635C2 15.6693 2 17.0221 2.9166 18.2006C3.83321 19.3791 4.83766 19.5839 6.84656 19.9934C8.45489 20.3212 10.1903 20.5 12 20.5Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M15.9621 12.3129C15.8137 12.9187 15.0241 13.3538 13.4449 14.2241C11.7272 15.1705 10.8684 15.6438 10.1728 15.4615C9.9372 15.3997 9.7202 15.2911 9.53799 15.1438C9 14.7089 9 13.8059 9 12C9 10.1941 9 9.29112 9.53799 8.85618C9.7202 8.70886 9.9372 8.60029 10.1728 8.53854C10.8684 8.35621 11.7272 8.82945 13.4449 9.77593C15.0241 10.6462 15.8137 11.0813 15.9621 11.6871C16.0126 11.8933 16.0126 12.1067 15.9621 12.3129Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="footer__social-lenguaje scroll-reveal">
+              <label for="lenguaje">Lenguaje:</label>
+              <select name="lenguaje" id="lenguaje">
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+              </select>
+            </div>
+          </div>
+          <div class="footer__copy scroll-reveal">
+            <p>&copy; 2024 Willian Arevalo.</p>
+            <div class="footer__copy-links">
+              <a href="">Terminos</a>
+              <a href="">Privacidad</a>
+              <a href="">Cookies</a>
+              <a href="">Copyright</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/scrollreveal.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/accordion.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/buttons-size.js"></script>
+  </body>
+</html>
