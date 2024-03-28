@@ -260,8 +260,17 @@ header {
   text-align: center;
 }
 
+.link__login svg {
+  display: none;
+  color: var(--gray);
+}
+
 .link__login:hover {
   background-color: var(--white-100);
+  color: var(--black);
+}
+
+.link__login:hover svg {
   color: var(--black);
 }
 
@@ -1134,12 +1143,15 @@ header {
 .card__footer .card__footer-stars p {
   color: var(--gray);
 }
-.card__footer .card__footer-stars .starts {
-  color: var(--black-50);
+.card__footer .card__footer-stars .starts svg {
+  color: var(--gray);
+  width: 18px;
+  height: 18px;
 }
 
 .card__footer .card__footer-stars .starts .light {
-  color: var(--gray);
+  color: var(--orange);
+  fill: var(--orange);
 }
 
 .card__footer .button__card {
@@ -2031,9 +2043,9 @@ header {
 
 .product-single__images .product-single__images-thumbs {
   display: flex;
-  justify-content: center;
+  align-items: center;
   height: 100%;
-  gap: 10px;
+  gap: 5px;
 }
 
 /*MODAL*/
@@ -2103,7 +2115,11 @@ header {
   border-radius: 5px;
 }
 
-.product-single__images .product-single__images-thumbs img {
+.product-single__images .product-single__images-thumbs .images-thumbs-col-1 img,
+.product-single__images
+  .product-single__images-thumbs
+  .images-thumbs-col-2
+  img {
   width: 70px;
   height: 60px;
   object-fit: cover;
@@ -2191,6 +2207,10 @@ header {
   border-radius: 50%;
   background-color: var(--orange);
   border: 1px solid var(--gray);
+}
+
+.product-single__info-colors-color-item.active {
+  box-shadow: 0px 0px 8px var(--orange);
 }
 
 .product-single__info-colors-color-item.blue {
@@ -3200,6 +3220,24 @@ footer .contenedor-footer {
   }
 }
 
+@media (max-width: 565px) {
+  .product-single__images .product-single__images-thumbs {
+    flex-direction: column;
+  }
+
+  .product-single__images
+    .product-single__images-thumbs
+    .images-thumbs-col-1
+    img,
+  .product-single__images
+    .product-single__images-thumbs
+    .images-thumbs-col-2
+    img {
+    width: 120px;
+    height: 100px;
+  }
+}
+
 @media (max-width: 500px) {
   .container-login .login .login__title {
     font-size: 20px;
@@ -3220,5 +3258,39 @@ footer .contenedor-footer {
 
   .grid-ofertas__grid-1 .grid-1__content-text p {
     font-size: 10px;
+  }
+
+  .product-single__images
+    .product-single__images-thumbs
+    .images-thumbs-col-1
+    img,
+  .product-single__images
+    .product-single__images-thumbs
+    .images-thumbs-col-2
+    img {
+    width: 80px;
+    height: 70px;
+  }
+
+  .product-single__info .product-single__info-title div h2 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav__user .link__login {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+
+  .nav__user .link__login p {
+    display: none;
+  }
+
+  .nav__user .link__login svg {
+    display: block;
+    width: 20px;
+    height: 20px;
   }
 }
