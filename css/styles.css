@@ -3544,6 +3544,10 @@ footer .contenedor-footer {
 }
 
 @media (max-width: 500px) {
+  body {
+    background-color: var(--black);
+  }
+
   .container-register .register {
     border: none;
     border-radius: 0px;
@@ -3603,6 +3607,10 @@ footer .contenedor-footer {
 }
 
 @media (max-width: 400px) {
+  .container-register {
+    width: 100%;
+  }
+
   .container-register .register {
     width: 350px;
   }
@@ -3621,5 +3629,15 @@ footer .contenedor-footer {
     display: block;
     width: 20px;
     height: 20px;
+  }
+}
+
+@media (max-width: 300px) {
+  .container-register {
+    width: 100%;
+  }
+
+  .container-register .register {
+    width: 300px;
   }
 }
