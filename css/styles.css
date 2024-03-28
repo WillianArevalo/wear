@@ -3544,11 +3544,6 @@ footer .contenedor-footer {
 }
 
 @media (max-width: 500px) {
-  .container-register {
-    width: 100%;
-    height: 100%;
-  }
-
   .container-register .register {
     border: none;
     border-radius: 0px;
