@@ -3431,7 +3431,7 @@ footer .contenedor-footer {
   }
 
   .container-login .login__image {
-    top: 120px;
+    top: 100px;
   }
 
   .container-login .login .login__title,
@@ -3574,6 +3574,13 @@ footer .contenedor-footer {
 
   .container-login .login {
     border: none;
+    border-top: 1px solid var(--black-50);
+    border-radius: 0px;
+  }
+
+  .container-login .login__image {
+    width: 100px;
+    height: 100px;
   }
 
   .contenedor-carousel button svg {
@@ -3613,6 +3620,12 @@ footer .contenedor-footer {
 
   .container-register .register {
     width: 350px;
+  }
+
+  .container-login .login .login__title {
+    width: 200px;
+    font-size: 18px;
+    padding-inline: 20px;
   }
 
   .nav__user .link__login {
