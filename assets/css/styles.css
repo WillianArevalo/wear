@@ -1112,6 +1112,12 @@ header {
   overflow-wrap: break-word;
 }
 
+.card__body .card__body-price {
+  font-size: 20px;
+  color: var(--orange);
+  font-weight: bold;
+}
+
 .card__body .card__body-price-offer {
   font-size: 20px;
   color: var(--orange);
@@ -1416,8 +1422,15 @@ header {
 .cart__item .cart__item-content .cart__item-precio {
   width: 40%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.cart__item .cart__item-content .cart__item-precio .precio__regular {
+  font-size: 16px;
+  color: var(--gray);
+  text-decoration: line-through;
 }
 
 .cart__item .cart__item-content .cart__item-subtotal {
