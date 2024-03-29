@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  /*   localStorage.clear(); */
   const buttonCart = document.querySelectorAll(".button-add-cart");
   var totalPrice = document.getElementById("total-price");
+  var subtotalPrice = document.getElementById("subtotal-price");
+  var totalDescuento = document.getElementById("total-descuento");
 
   $("#cart__items").on("click", ".btnPlus", function () {
     var title = $(this).closest(".cart__item").find("h3").text();
@@ -74,22 +77,33 @@ document.addEventListener("DOMContentLoaded", function () {
   buttonCart.forEach((btn) => {
     btn.addEventListener("click", function () {
       const card = btn.closest(".card");
-
+      var offer = 0;
       var title = card.querySelector(".card__body-title").innerText;
-      var price = card.querySelector(".card__body-price").innerText;
+      var price = card.querySelector(".card__body-price-regular").innerText;
       var description = card.querySelector(".card__body-text").innerText;
-      var priceOffer = card.querySelector(".card__body-price-offer").innerText;
+      if (card.querySelector(".card__body-price-offer")) {
+        var priceOffer = card.querySelector(
+          ".card__body-price-offer"
+        ).innerText;
+      }
       const img = card.querySelector(".card__header img").src;
 
-      if (priceOffer) {
-        price = priceOffer;
+      if (!priceOffer) {
+        priceOffer = "$0.00";
       }
+
+      var precioNormal = price.replace("$", "");
+      var oferta = priceOffer.replace("$", "");
+      var offer =
+        "$" + (parseFloat(precioNormal) - parseFloat(oferta)).toFixed(2);
 
       let products = JSON.parse(localStorage.getItem("products")) || [];
 
       let product = {
         title: title,
         price: price,
+        priceOffer: priceOffer,
+        ofert: offer,
         description: description,
         quantity: 1,
         img: img,
@@ -132,11 +146,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function actualizartotalPrice() {
     var productos = JSON.parse(localStorage.getItem("products")) || [];
+    var subtotal = 0;
+    var totalOffer = 0;
     var total = 0;
     productos.forEach((producto) => {
       var precio = producto.price.replace("$", "");
-      total += parseFloat(precio) * producto.quantity;
+      var offer = producto.ofert.replace("$", "");
+      subtotal += parseFloat(precio) * producto.quantity;
+      totalOffer += parseFloat(offer) * producto.quantity;
     });
+
+    total = subtotal - totalOffer;
+
+    if (subtotalPrice) {
+      subtotalPrice.innerText = "Subtotal: $" + subtotal.toFixed(2);
+    }
+
+    if (totalDescuento) {
+      totalDescuento.innerText = "$" + totalOffer.toFixed(2);
+    }
 
     if (totalPrice) {
       totalPrice.innerText = "$" + total.toFixed(2);
@@ -239,7 +267,11 @@ document.addEventListener("DOMContentLoaded", function () {
                   </button>
                 </div>
                 <div class="cart__item-precio">
-                  <p>${producto.price}</p>
+                    ${
+                      producto.ofert === "$0.00"
+                        ? `<p>$${precio}</p>`
+                        : `<p class="precio__regular">$${precio}</p><p class="precio__ofert">${producto.priceOffer}</p>`
+                    }
                 </div>
                 <div class="cart__item-subtotal">
                   <p>$${subtotal}</p>
