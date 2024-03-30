@@ -223,7 +223,7 @@ header {
   position: absolute;
   background: var(--black-100);
   border: none;
-  z-index: 1000;
+  z-index: 200;
   margin-top: 4px;
   width: 200px;
   border-radius: 2px;
@@ -607,6 +607,58 @@ header {
 /* END MAIN */
 
 /* INDEX.HTML  */
+
+#toast-container {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  z-index: 3000 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.toast {
+  background-color: var(--black);
+  color: var(--orange);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--orange);
+  animation: fadeInOut 3s ease-in-out;
+}
+
+.toast .toastContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.toast .toastContent svg {
+  color: var(--orange);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.hidden {
+  display: none;
+}
 
 /* SECTION POPULARES */
 .contenedor-carousel {
@@ -1215,7 +1267,7 @@ header {
 .custom-select {
   position: relative;
   display: inline-block;
-  border-radius: 50px;
+  border-radius: 5px;
   background: var(--orange);
 }
 
@@ -1253,8 +1305,8 @@ header {
 .select-items {
   display: none;
   position: absolute;
-  background-color: var(--gray);
-  border: 1px solid var(--black-50);
+  background-color: var(--white);
+  border: 1px solid var(--white);
   border-radius: 5px;
   z-index: 50;
   width: 100%;
@@ -1747,7 +1799,7 @@ header {
   position: absolute;
   background-color: var(--white);
   border-radius: 5px;
-  z-index: 1000;
+  z-index: 200;
   min-width: 80px;
   margin-top: 5px;
   color: var(--black);

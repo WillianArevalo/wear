@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $(this).closest(".cart__item").remove();
     actualizarTotal();
     actualizartotalPrice();
+    showToast("Producto eliminado del carrito");
   });
 
   buttonCart.forEach((btn) => {
@@ -79,7 +80,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const card = btn.closest(".card");
       var offer = 0;
       var title = card.querySelector(".card__body-title").innerText;
-      var price = card.querySelector(".card__body-price-regular").innerText;
+
+      if (!card.querySelector(".card__body-price-regular")) {
+        var price = card.querySelector(".card__body-price").innerText;
+      } else {
+        var price = card.querySelector(".card__body-price-regular").innerText;
+      }
       var description = card.querySelector(".card__body-text").innerText;
       if (card.querySelector(".card__body-price-offer")) {
         var priceOffer = card.querySelector(
@@ -97,8 +103,11 @@ document.addEventListener("DOMContentLoaded", function () {
       var offer =
         "$" + (parseFloat(precioNormal) - parseFloat(oferta)).toFixed(2);
 
-      let products = JSON.parse(localStorage.getItem("products")) || [];
+      if (offer === price) {
+        offer = "$0.00";
+      }
 
+      let products = JSON.parse(localStorage.getItem("products")) || [];
       let product = {
         title: title,
         price: price,
@@ -125,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       localStorage.setItem("products", JSON.stringify(products));
       actualizarTotal();
+      showToast("Producto agregado al carrito");
     });
   });
 
@@ -173,6 +183,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
   actualizartotalPrice();
   actualizarTotal();
+
+  function showToast(message) {
+    const toastcontainer = document.getElementById("toast-container");
+    const toast = document.createElement("div");
+    toast.classList.add("toast");
+
+    const contentToast = document.createElement("div");
+    contentToast.classList.add("toastContent");
+
+    const svgCheck = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+        <path d="M17 3.33782C15.5291 2.48697 13.8214 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.3151 21.9311 10.6462 21.8 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M8 12.5C8 12.5 9.5 12.5 11.5 16C11.5 16 17.0588 6.83333 22 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>`;
+
+    contentToast.innerHTML = svgCheck;
+
+    const toastText = document.createElement("p");
+    toastText.textContent = message;
+    contentToast.appendChild(toastText);
+
+    toast.appendChild(contentToast);
+    toastcontainer.appendChild(toast);
+    toastcontainer.classList.remove("hidden");
+
+    setTimeout(function () {
+      toastcontainer.removeChild(toast);
+    }, 3000);
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -268,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="cart__item-precio">
                     ${
-                      producto.ofert === "$0.00"
+                      producto.priceOffer === "$0.00"
                         ? `<p>$${precio}</p>`
                         : `<p class="precio__regular">$${precio}</p><p class="precio__ofert">${producto.priceOffer}</p>`
                     }
