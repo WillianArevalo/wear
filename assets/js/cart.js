@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
       products.splice(existingProductIndex, 1);
       localStorage.setItem("products", JSON.stringify(products));
       actualizarTotal();
+      showToast("Producto eliminado del carrito");
     }
     actualizarTotal();
     actualizartotalPrice();
