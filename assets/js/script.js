@@ -4,6 +4,8 @@ $(document).ready(function () {
   const icon = document.getElementById("icon-hamburger");
   const nav = document.getElementById("navbar");
   const body = document.getElementById("body");
+  const btnLogin = document.querySelector(".link__login");
+  const btnPerfil = document.querySelector(".link__perfil");
 
   btnHamburger.click(function () {
     if (nav.classList.contains("active")) {
@@ -26,4 +28,19 @@ $(document).ready(function () {
     icon.classList.remove("bx-x");
     icon.classList.add("bx-menu");
   }
+
+  var user = JSON.parse(localStorage.getItem("user"));
+  if (user) {
+    if (user.session == true) {
+      btnLogin.style.display = "none";
+      btnPerfil.style.display = "flex";
+      $("#user-name").text(user.name);
+    }
+  }
+
+  $(".btn-close-session").on("click", function () {
+    user.session = false;
+    localStorage.setItem("user", JSON.stringify(user));
+    location.href = "http://localhost/wear/";
+  });
 });

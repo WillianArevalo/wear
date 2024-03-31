@@ -324,4 +324,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   actualizarCarrito();
+
+  const modal = document.getElementById("modal-login");
+  const body = document.getElementById("body");
+
+  $("#button-pay").on("click", function () {
+    var user = JSON.parse(localStorage.getItem("user"));
+
+    if (user) {
+      console.log(user.session);
+      if (user.session == true) {
+        window.location.href = "payment.html";
+      } else {
+        modal.style.display = "flex";
+        body.classList.add("active");
+      }
+    } else {
+      modal.style.display = "flex";
+      body.classList.add("active");
+    }
+  });
+
+  $("#close-modal").on("click", function () {
+    body.classList.remove("active");
+    modal.style.display = "none";
+  });
 });

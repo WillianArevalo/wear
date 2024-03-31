@@ -17,6 +17,7 @@
   </head>
   <body>
     <main class="container-register">
+      <div id="toast-container" class="hidden"></div>
       <div class="register__card">
         <div class="register__image">
           <img
@@ -34,74 +35,83 @@
             id="form-register"
           >
             <div class="form-group">
-              <div class="form-group__input">
-                <span class="register__icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    color="#000000"
-                    fill="none"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    />
-                    <path
-                      d="M7.5 17C9.8317 14.5578 14.1432 14.4428 16.5 17M14.4951 9.5C14.4951 10.8807 13.3742 12 11.9915 12C10.6089 12 9.48797 10.8807 9.48797 9.5C9.48797 8.11929 10.6089 7 11.9915 7C13.3742 7 14.4951 8.11929 14.4951 9.5Z"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </span>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  class="register__input"
-                  placeholder="Nombre"
-                />
+              <div class="form-group__group">
+                <div class="form-group__input">
+                  <span class="register__icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M7.5 17C9.8317 14.5578 14.1432 14.4428 16.5 17M14.4951 9.5C14.4951 10.8807 13.3742 12 11.9915 12C10.6089 12 9.48797 10.8807 9.48797 9.5C9.48797 8.11929 10.6089 7 11.9915 7C13.3742 7 14.4951 8.11929 14.4951 9.5Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="register__input"
+                    placeholder="Nombre"
+                  />
+                </div>
+                <div class="input-validation" id="input-validation-name"></div>
               </div>
-              <div class="form-group__input">
-                <span class="register__icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    color="#000000"
-                    fill="none"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    />
-                    <path
-                      d="M7.5 17C9.8317 14.5578 14.1432 14.4428 16.5 17M14.4951 9.5C14.4951 10.8807 13.3742 12 11.9915 12C10.6089 12 9.48797 10.8807 9.48797 9.5C9.48797 8.11929 10.6089 7 11.9915 7C13.3742 7 14.4951 8.11929 14.4951 9.5Z"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </span>
-                <input
-                  type="text"
-                  name="lastname"
-                  id="lastname"
-                  class="register__input"
-                  placeholder="Apellido"
-                />
+              <div class="form-group__group">
+                <div class="form-group__input">
+                  <span class="register__icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M7.5 17C9.8317 14.5578 14.1432 14.4428 16.5 17M14.4951 9.5C14.4951 10.8807 13.3742 12 11.9915 12C10.6089 12 9.48797 10.8807 9.48797 9.5C9.48797 8.11929 10.6089 7 11.9915 7C13.3742 7 14.4951 8.11929 14.4951 9.5Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                  <input
+                    type="text"
+                    name="lastname"
+                    id="lastname"
+                    class="register__input"
+                    placeholder="Apellido"
+                  />
+                </div>
+                <div
+                  class="input-validation"
+                  id="input-validation-lastname"
+                ></div>
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group col">
               <div class="form-group__input">
                 <span class="register__icon">
                   <svg
@@ -134,119 +144,132 @@
                   placeholder="Correo electrónico"
                 />
               </div>
+              <div class="input-validation" id="input-validation-email"></div>
             </div>
             <div class="form-group">
-              <div class="form-group__input">
-                <span class="register__icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    color="#000000"
-                    fill="none"
-                  >
-                    <path
-                      d="M2.5 9C2.53045 8.19543 2.6201 7.37669 2.76932 6.55013C2.8806 5.93375 2.93623 5.62556 3.12624 5.41465C3.31624 5.20374 3.78574 5.05413 4.72473 4.7549C7.03407 4.01899 8.98673 2 11.9982 2C15.0099 2 16.9647 4.01915 19.275 4.75499C20.2139 5.05405 20.6834 5.20358 20.8734 5.41449C21.0635 5.6254 21.1191 5.93364 21.2305 6.55013C21.3797 7.37669 21.4695 8.19543 21.5 9M19.4451 17C18.125 19.0226 16.1772 20.6375 13.6147 21.6175C12.9478 21.8725 12.6143 22 12.0015 22C11.3887 22 11.0553 21.8725 10.3883 21.6175C7.82558 20.6375 5.87726 19.0227 4.55666 17"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M8.5 12L9.5 13M9.5 13L10.5 14M9.5 13L10.5 12M9.5 13L8.5 14"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M3.5 12L4.5 13M4.5 13L5.5 14M4.5 13L5.5 12M4.5 13L3.5 14"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M13.5 12L14.5 13M14.5 13L15.5 14M14.5 13L15.5 12M14.5 13L13.5 14"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M18.5 12L19.5 13M19.5 13L20.5 14M19.5 13L20.5 12M19.5 13L18.5 14"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </span>
-                <input
-                  type="text"
-                  name="password"
-                  id="password"
-                  class="register__input"
-                  placeholder="Contraseña"
-                />
+              <div class="form-group__group">
+                <div class="form-group__input">
+                  <span class="register__icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M2.5 9C2.53045 8.19543 2.6201 7.37669 2.76932 6.55013C2.8806 5.93375 2.93623 5.62556 3.12624 5.41465C3.31624 5.20374 3.78574 5.05413 4.72473 4.7549C7.03407 4.01899 8.98673 2 11.9982 2C15.0099 2 16.9647 4.01915 19.275 4.75499C20.2139 5.05405 20.6834 5.20358 20.8734 5.41449C21.0635 5.6254 21.1191 5.93364 21.2305 6.55013C21.3797 7.37669 21.4695 8.19543 21.5 9M19.4451 17C18.125 19.0226 16.1772 20.6375 13.6147 21.6175C12.9478 21.8725 12.6143 22 12.0015 22C11.3887 22 11.0553 21.8725 10.3883 21.6175C7.82558 20.6375 5.87726 19.0227 4.55666 17"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.5 12L9.5 13M9.5 13L10.5 14M9.5 13L10.5 12M9.5 13L8.5 14"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M3.5 12L4.5 13M4.5 13L5.5 14M4.5 13L5.5 12M4.5 13L3.5 14"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M13.5 12L14.5 13M14.5 13L15.5 14M14.5 13L15.5 12M14.5 13L13.5 14"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M18.5 12L19.5 13M19.5 13L20.5 14M19.5 13L20.5 12M19.5 13L18.5 14"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    class="register__input"
+                    placeholder="Contraseña"
+                  />
+                </div>
+                <div
+                  class="input-validation"
+                  id="input-validation-password"
+                ></div>
               </div>
-              <div class="form-group__input">
-                <span class="register__icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    color="#000000"
-                    fill="none"
-                  >
-                    <path
-                      d="M13.4082 16.6682C13.4082 16.6682 14.0332 16.6682 14.6582 18.0015C14.6582 18.0015 16.6435 14.6682 18.4082 14.0015"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16.9434 7.00146H16.9524"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M11.9434 7.00146H11.9524"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M6.94336 7.00146H6.95234"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M7.89193 11.9685H5.00845C3.34693 11.9685 2 10.6254 2 8.96851V4.99854C2 3.34168 3.34693 1.99854 5.00845 1.99854H18.9916C20.6531 1.99854 22 3.34168 22 4.99854V9.12944"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M21.9996 16.0015C21.9996 12.6878 19.3057 10.0015 15.9827 10.0015C12.6597 10.0015 9.96582 12.6878 9.96582 16.0015C9.96582 19.3152 12.6597 22.0015 15.9827 22.0015C19.3057 22.0015 21.9996 19.3152 21.9996 16.0015Z"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </span>
-                <input
-                  type="text"
-                  name="confirm-password"
-                  id="confirm-password"
-                  class="register__input"
-                  placeholder="Confirmar contraseña"
-                />
+              <div class="form-group__group">
+                <div class="form-group__input">
+                  <span class="register__icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      color="#000000"
+                      fill="none"
+                    >
+                      <path
+                        d="M13.4082 16.6682C13.4082 16.6682 14.0332 16.6682 14.6582 18.0015C14.6582 18.0015 16.6435 14.6682 18.4082 14.0015"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16.9434 7.00146H16.9524"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.9434 7.00146H11.9524"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.94336 7.00146H6.95234"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.89193 11.9685H5.00845C3.34693 11.9685 2 10.6254 2 8.96851V4.99854C2 3.34168 3.34693 1.99854 5.00845 1.99854H18.9916C20.6531 1.99854 22 3.34168 22 4.99854V9.12944"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M21.9996 16.0015C21.9996 12.6878 19.3057 10.0015 15.9827 10.0015C12.6597 10.0015 9.96582 12.6878 9.96582 16.0015C9.96582 19.3152 12.6597 22.0015 15.9827 22.0015C19.3057 22.0015 21.9996 19.3152 21.9996 16.0015Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                  <input
+                    type="password"
+                    name="confirm-password"
+                    id="confirm-password"
+                    class="register__input"
+                    placeholder="Confirmar contraseña"
+                  />
+                </div>
+                <div
+                  class="input-validation"
+                  id="input-validation-confirm-password"
+                ></div>
               </div>
             </div>
             <button type="submit" class="register__button">
@@ -325,5 +348,6 @@
       </div>
     </main>
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/register.js"></script>
   </body>
 </html>
