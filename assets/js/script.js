@@ -41,6 +41,11 @@ $(document).ready(function () {
   $(".btn-close-session").on("click", function () {
     user.session = false;
     localStorage.setItem("user", JSON.stringify(user));
-    location.href = "http://localhost/wear/";
+
+    if (window.location.pathname.includes("pages")) {
+      location.href = "../index.html";
+    } else {
+      location.href = "index.html";
+    }
   });
 });
