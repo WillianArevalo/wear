@@ -1,11 +1,10 @@
-//Seleccionamos el documento y le decimos que cuando este listo ejecute la funcion
 $(document).ready(function () {
   var btnHamburger = $("#button-hamburger");
   const icon = document.getElementById("icon-hamburger");
   const nav = document.getElementById("navbar");
   const body = document.getElementById("body");
   const btnLogin = document.querySelector(".link__login");
-  const btnPerfil = document.querySelector(".link__perfil");
+  const btnProfile = document.querySelector(".link__perfil");
 
   btnHamburger.click(function () {
     if (nav.classList.contains("active")) {
@@ -33,7 +32,7 @@ $(document).ready(function () {
   if (user) {
     if (user.session == true) {
       btnLogin.style.display = "none";
-      btnPerfil.style.display = "flex";
+      btnProfile.style.display = "flex";
       $("#user-name").text(user.name);
     }
   }

@@ -11,6 +11,14 @@
     />
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/icons/css/boxicons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body id="body">
@@ -21,7 +29,7 @@
             <img src="../assets/images/logo.png" alt="Logo" class="nav__logo" />
           </li>
           <li class="nav__links-link">
-            <a href="../index.html" class="active">Inicio</a>
+            <a href="index.html" class="active">Inicio</a>
           </li>
           <li class="nav__links-link nav__dropdown">
             <a href="#"> Hombre</a>
@@ -50,7 +58,7 @@
         </ul>
         <div class="nav__user">
           <img src="../assets/images/logo.png" alt="Logo" class="nav__logo" />
-          <a href="cart.html" class="link__cart">
+          <a href="pages/cart.html" class="link__cart">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -95,7 +103,7 @@
             </svg>
             <span id="total-productos"></span>
           </a>
-          <a href="login.html" class="link__login">
+          <a href="pages/login.html" class="link__login">
             <p>Inicia sesión</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +155,7 @@
             </a>
             <ul class="submenu-perfil">
               <li>
-                <a href="#">
+                <a href="profile.html">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -273,93 +281,82 @@
     </header>
     <main class="main" id="main">
       <div id="toast-container" class="hidden"></div>
-
       <div class="contenedor-general">
-        <div class="contenedor-cart scroll-reveal">
-          <div class="cart__title scroll-reveal">
-            <h1>Carrito de compras</h1>
-          </div>
-          <div class="cart-table">
-            <div class="cart-table__col producto"><h3>Producto</h3></div>
-            <div class="cart-table__col cantidad">
-              <h3>Cantidad</h3>
-            </div>
-            <div class="cart-table__col precio">
-              <h3 class="precio-pu">Precio unitario</h3>
-              <h3 class="precio-p-u">P/U</h3>
-            </div>
-            <div class="cart-table__col subtotal"><h3>Total</h3></div>
-          </div>
-          <div class="cart__items scroll-reveal" id="cart__items"></div>
-          <div class="cart__total scroll-reveal">
-            <div class="cart__total-subtotal">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-                color="#000000"
-                fill="none"
-              >
-                <path
-                  d="M3.87289 17.0194L2.66933 9.83981C2.48735 8.75428 2.39637 8.21152 2.68773 7.85576C2.9791 7.5 3.51461 7.5 4.58564 7.5H19.4144C20.4854 7.5 21.0209 7.5 21.3123 7.85576C21.6036 8.21152 21.5126 8.75428 21.3307 9.83981L20.1271 17.0194C19.7282 19.3991 19.5287 20.5889 18.7143 21.2945C17.9 22 16.726 22 14.3782 22H9.62182C7.27396 22 6.10003 22 5.28565 21.2945C4.47127 20.5889 4.27181 19.3991 3.87289 17.0194Z"
-                  stroke-width="1.5"
+        <div class="contenedor-profile">
+          <div class="contenedor-profile-col-1">
+            <div class="contenedor-profile__header">
+              <div class="contenedor-profile-profile"></div>
+              <div class="contenedor-profile-profile"></div>
+              <div class="contenedor-profile__header-img">
+                <img
+                  src="../assets/images/perfil.jpg"
+                  alt="Profile"
+                  class="contenedor-profile__header-img-img"
+                  id="image-profile"
                 />
-                <path
-                  d="M17.5 7.5C17.5 4.46243 15.0376 2 12 2C8.96243 2 6.5 4.46243 6.5 7.5"
-                  stroke-width="1.5"
-                />
-              </svg>
-              <p id="subtotal-price"></p>
-              <p class="total-price"></p>
+                <button id="btn-change-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    color="#000000"
+                    fill="none"
+                  >
+                    <path
+                      d="M15.2141 5.98239L16.6158 4.58063C17.39 3.80646 18.6452 3.80646 19.4194 4.58063C20.1935 5.3548 20.1935 6.60998 19.4194 7.38415L18.0176 8.78591M15.2141 5.98239L6.98023 14.2163C5.93493 15.2616 5.41226 15.7842 5.05637 16.4211C4.70047 17.058 4.3424 18.5619 4 20C5.43809 19.6576 6.94199 19.2995 7.57889 18.9436C8.21579 18.5877 8.73844 18.0651 9.78375 17.0198L18.0176 8.78591M15.2141 5.98239L18.0176 8.78591"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11 20H17"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-            <div class="cart__total-descuento">
-              <p>Descuento:</p>
-              <p id="total-descuento">$0.00</p>
+            <input
+              type="file"
+              id="change-image"
+              accept=".jpg, .jpeg, .png, .webp"
+            />
+            <div class="contenedor-profile__info">
+              <div class="profile-info">
+                <div class="profile-row">
+                  <h2>Willian Arévalo</h2>
+                  <p>awillianernesto@gmail.com</p>
+                </div>
+                <div class="profile-row">
+                  <h3>Telefono:</h3>
+                  <p>+503 7545 - 6642</p>
+                </div>
+                <div class="profile-row">
+                  <h3>Dirección de facturación:</h3>
+                  <p>El Salvador, La Libertad, San Pablo Tacachico</p>
+                </div>
+                <div class="profile-row">
+                  <h3>Metodo de pago:</h3>
+                  <p>Tarjeta de credito VISA</p>
+                </div>
+              </div>
             </div>
-            <div class="cart__total-precio">
-              <p>Total:</p>
-              <p class="total-price" id="total-price"></p>
+          </div>
+          <div class="contenedor-profile-col-2">
+            <div class="profile-row">
+              <h3>Historial de compras:</h3>
+              <p>No has realizado ninguna compra.</p>
+              <h3 style="margin-top: 20px">Metodo de pago:</h3>
+              <p>Tarjeta de credito VISA</p>
             </div>
-          </div>
-          <div class="cart__button-pay scroll-reveal">
-            <button class="button-pay" id="button-pay">Realizar pago</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal" id="modal-login">
-        <div class="content-modal">
-          <button id="close-modal">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-              color="#000000"
-              fill="none"
-            >
-              <path
-                d="M19 5L5 19M5 5L19 19"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-          <div class="content-modal__title">
-            <h2>Inicia sesión</h2>
-          </div>
-          <div class="content-modal__text">
-            <p>
-              Inicia sesión para poder realizar la compra, si no tienes una
-              cuenta puedes registrarte.
-            </p>
-          </div>
-          <div class="content-modal__buttons">
-            <a href="login.html" class="button-modal">Iniciar sesión</a>
-            <a href="register.html" class="button-modal">Registrarse</a>
+            <div class="profile-row">
+              <h3>Metodo de pago:</h3>
+              <p>Tarjeta de credito VISA</p>
+            </div>
           </div>
         </div>
       </div>
@@ -375,7 +372,7 @@
                 viewBox="0 0 24 24"
                 width="24"
                 height="24"
-                color="#fff"
+                color="#000000"
                 fill="none"
               >
                 <path
@@ -443,15 +440,19 @@
                   viewBox="0 0 24 24"
                   width="24"
                   height="24"
-                  color="#000000"
                   fill="none"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M6.18182 10.3333C5.20406 10.3333 5 10.5252 5 11.4444V13.1111C5 14.0304 5.20406 14.2222 6.18182 14.2222H8.54545V20.8889C8.54545 21.8081 8.74951 22 9.72727 22H12.0909C13.0687 22 13.2727 21.8081 13.2727 20.8889V14.2222H15.9267C16.6683 14.2222 16.8594 14.0867 17.0631 13.4164L17.5696 11.7497C17.9185 10.6014 17.7035 10.3333 16.4332 10.3333H13.2727V7.55556C13.2727 6.94191 13.8018 6.44444 14.4545 6.44444H17.8182C18.7959 6.44444 19 6.25259 19 5.33333V3.11111C19 2.19185 18.7959 2 17.8182 2H14.4545C11.191 2 8.54545 4.48731 8.54545 7.55556V10.3333H6.18182Z"
+                    d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
                     stroke="currentColor"
                     stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16.9265 8.02637H13.9816C12.9378 8.02637 12.0894 8.86847 12.0817 9.91229L11.9964 21.4268M10.082 14.0017H14.8847"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                 </svg>
@@ -462,7 +463,6 @@
                   viewBox="0 0 24 24"
                   width="24"
                   height="24"
-                  color="#000000"
                   fill="none"
                 >
                   <path
@@ -491,7 +491,6 @@
                   viewBox="0 0 24 24"
                   width="24"
                   height="24"
-                  color="#000000"
                   fill="none"
                 >
                   <path
@@ -509,7 +508,6 @@
                   viewBox="0 0 24 24"
                   width="24"
                   height="24"
-                  color="#000000"
                   fill="none"
                 >
                   <path
@@ -548,8 +546,13 @@
     </footer>
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../assets/js/swiper.js"></script>
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/carousel.js"></script>
+    <script src="../assets/js/select.js"></script>
     <script src="../assets/js/scrollreveal.js"></script>
     <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/toast.js"></script>
+    <script src="../assets/js/profile.js"></script>
   </body>
 </html>

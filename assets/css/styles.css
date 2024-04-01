@@ -3063,6 +3063,137 @@ header {
 
 /* END REGISTER.HTML */
 
+/* PROFILE.HTML */
+
+.contenedor-profile {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.contenedor-profile-col-1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-radius: 5px;
+}
+
+.contenedor-profile-col-1 #change-image {
+  opacity: 0;
+  height: 0px;
+}
+
+.contenedor-profile-col-2 {
+  display: flex;
+  gap: 10px;
+  flex: 4;
+  flex-direction: column;
+}
+
+.contenedor-profile__header {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.contenedor-profile__header .contenedor-profile-profile {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+}
+
+.contenedor-profile__header .contenedor-profile-profile:nth-child(1) {
+  background: var(--orange);
+  border-radius: 5px;
+  top: 0;
+}
+
+.contenedor-profile__header .contenedor-profile-profile:nth-child(2) {
+  background-color: var(--black);
+  bottom: 0;
+}
+
+.contenedor-profile__header-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contenedor-profile__header-img button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--gray);
+  background-color: var(--black);
+  cursor: pointer;
+}
+
+.contenedor-profile__header-img input {
+  visibility: hidden;
+}
+
+.contenedor-profile__header-img button svg {
+  width: 20px;
+  height: 20px;
+  color: var(--gray);
+}
+
+.contenedor-profile__header-img button:hover {
+  background-color: var(--gray);
+}
+
+.contenedor-profile__header-img button:hover svg {
+  color: var(--black);
+}
+
+.contenedor-profile__header-img .contenedor-profile__header-img-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.contenedor-profile__info .profile-info {
+  height: auto;
+  padding: 0px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.profile-info > h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--orange);
+  text-align: left;
+}
+
+.profile-info > p {
+  font-size: 18px;
+  color: var(--gray);
+  text-align: left;
+}
+
+.profile-info .profile-row,
+.contenedor-profile-col-2 .profile-row {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--gray);
+  background-color: var(--black-100);
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* END PROFILE.HTML */
+
 /* FOOTER */
 
 footer {
