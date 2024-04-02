@@ -11,7 +11,7 @@ Proyecto de diseño, enfocado en diseñar una tienda en línea de ropa, con un s
     - **/css**: Archivos de diseño.
     - **/fonts**: Archivos de la tipografía del proyecto.
     - **/screenshots**: Capturas de pantalla de la página.
-  - **/assets/images**: Imágenes utilizadas en el proyecto.
+    - **/images**: Imágenes utilizadas en el proyecto.
 - **/pages**: Contiene las vistas HTML de las diferentes páginas del proyecto.
 
 
